@@ -1,0 +1,57 @@
+# ~/.slate configuration file
+
+# Relaunch and load
+bind 1:ctrl,alt relaunch
+bind 2:ctrl,alt undo
+
+# Configs
+config windowHintsIgnoreHiddenWindows false
+config windowHintsShowIcons           true
+
+# Misc Aliases
+alias showHintsLeftHand hint AOEUIYQJKX
+alias showNormalHint hint AOEUIDHTNSYXFBPKGMCW
+
+# Aliases
+alias toggle_mail    chain toggle 'Mail' | focus 'Mail'
+alias move_win_left  nudge -15 +0
+alias move_win_right nudge +15 +0
+alias move_win_up    nudge +0 -30
+alias move_win_down  nudge +0 +30
+alias shrink_ver    resize +0 -5%
+alias enlarge_ver   resize +0 +5%
+alias shrink_hor    resize -5% -0
+alias enlarge_hor   resize +5% +0
+alias righthalf     chain push right bar-resize:screenSizeX/2 | push right bar-resize:screenSizeX*0.4 | push right bar-resize:screenSizeX*0.6
+alias lefthalf      chain push left  bar-resize:screenSizeX/2 | push left bar-resize:screenSizeX*0.4 | push left bar-resize:screenSizeX*0.6
+alias tophalf       push up    bar-resize:screenSizeY/2
+alias bottomhalf    push down  bar-resize:screenSizeY/2
+alias rightbottom   chain move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY*0.7 screenSizeX/2;screenSizeY*0.3 | move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY*0.5 screenSizeX/2;screenSizeY*0.5 | move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY*0.3 screenSizeX/2;screenSizeY*0.7
+alias righttop      chain move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY*0.7 | move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY*0.5 | move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY*0.3
+alias leftbottom   chain move screenOriginX;screenOriginY+screenSizeY*0.7 screenSizeX/2;screenSizeY*0.3 | move screenOriginX;screenOriginY+screenSizeY*0.5 screenSizeX/2;screenSizeY*0.5 | move screenOriginX;screenOriginY+screenSizeY*0.3 screenSizeX/2;screenSizeY*0.7
+alias lefttop      chain move screenOriginX;screenOriginY screenSizeX/2;screenSizeY*0.7 | move screenOriginX;screenOriginY screenSizeX/2;screenSizeY*0.5 | move screenOriginX;screenOriginY screenSizeX/2;screenSizeY*0.3
+alias center       move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/2;screenSizeY
+alias fullscreen   move screenOriginX;screenOriginY screenSizeX;screenSizeY
+
+# Bindings
+bind ':alt;cmd  ${righthalf}
+bind k:alt;cmd   ${lefthalf}
+# bind up:alt;cmd     ${tophalf}
+# bind down:alt;cmd   ${bottomhalf}
+bind ;:alt;cmd      ${rightbottom}
+bind p:alt;cmd      ${righttop}
+bind l:alt;cmd      ${leftbottom}
+bind o:alt;cmd      ${lefttop}
+bind c:alt;cmd      ${center}
+bind =:alt;cmd      ${enlarge_ver}
+bind -:alt;cmd      ${shrink_ver}
+# bind ]:alt;cmd      ${enlarge_hor}
+# bind [:alt;cmd      ${shrink_hor}
+bind f:alt;cmd      ${fullscreen}
+bind left:ctrl,shift    ${move_win_left}
+bind right:ctrl,shift   ${move_win_right}
+# bind up:ctrl,shift      ${move_win_up}
+# bind down:ctrl,shift    ${move_win_down}
+bind m:alt,ctrl         ${toggle_mail}
+
+bind tab:ctrl  ${showNormalHint}

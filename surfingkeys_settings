@@ -1,0 +1,10 @@
+// My settings
+settings.scrollStepSize = 110;
+map('<Ctrl-m>', '<Ctrl-h>');
+imap('fd', "<Esc>");
+aceVimMap('fd', '<Esc>', 'insert');
+
+mapkey('Q', '#1Click on an Image or a button', 'Hints.create("img, button", Hints.dispatchMouseClick)');
+map('q', 'k');
+mapkey('cw', '#2Switch frames', 'Normal.rotateFrame()');
+map('w', 'j')

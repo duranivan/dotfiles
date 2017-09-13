@@ -1,0 +1,5 @@
+# located in dir  ~/.config/zathura/
+# Window size settings
+set window-height 1200
+set window-width 800
+set selection-clipboard clipboard

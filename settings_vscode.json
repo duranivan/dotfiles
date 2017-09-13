@@ -1,0 +1,52 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 19,
+    "editor.fontFamily": "Operator Mono",
+    "editor.tabSize": 2,
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": true,
+    "editor.rulers": [80],
+    "editor.wordWrap": "wordWrapColumn",
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.fontSize": 18,
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.minimap.maxColumn": 80,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["f","d"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","d"],
+            "after": ["d", "d"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys":{
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-e>": false,
+    },
+    "workbench.iconTheme": "vscode-great-icons",
+    "window.zoomLevel": 0,
+    "vscode_custom_css.imports": [
+        "file:///Users/Yusuf/Desktop/vscode-style.css"
+    ],
+    "sync.gist": "7825cc976ff32331d3227faa14bcc0c7",
+    "sync.lastUpload": "2017-06-20T02:46:46.383Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.anonymousGist": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false
+}

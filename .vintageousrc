@@ -1,0 +1,4 @@
+:map j gj
+:map k gk
+:vmap < {n}<gv
+:vmap > {n}>gv

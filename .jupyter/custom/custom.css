@@ -1,0 +1,10 @@
+body, div#notebook {
+  font-family: Operator Mono;
+  font-size: 12pt !important;
+}
+
+.CodeMirror pre {
+  font-family: Operator Mono;
+  font-size: 12pt;
+  line-height: 1.5;
+}
