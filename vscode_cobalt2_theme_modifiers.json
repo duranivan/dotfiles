@@ -1,0 +1,28 @@
+{
+  "tokencolors": [
+    {
+      "name": "Function arguments",
+      "scope": ["variable.parameter", "parameters variable.function"],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#e1efff"
+      }
+    },
+    {
+      "name": "[JAVASCRIPT] - Storage Type Function",
+      "scope": "source.js storage.type.function",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#fb94ff"
+      }
+    },
+    {
+      "name": "[PYTHON] - Storage Type Function",
+      "scope": "source.python storage.type.function",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#fb94ff"
+      }
+    }
+  ]
+}
