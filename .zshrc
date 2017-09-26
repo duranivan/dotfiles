@@ -112,6 +112,7 @@ alias emg="/usr/local/Cellar/emacs-plus/24.5/Emacs.app/Contents/MacOS/Emacs &"
 alias emc="emacsclient -n"
 alias rstudio='open -a Rstudio'
 alias mk="open -a 'Marked 2'"
+alias code="code -r"
 
 # Fucntion to find directory with fzf
 function cdf () {
