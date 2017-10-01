@@ -56,7 +56,7 @@ SPACESHIP_PROMPT_SYMBOL="▲"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump zsh-autosuggestions)
+plugins=(git autojump zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -121,7 +121,7 @@ function cdf () {
 
 # Fuction to run ls after cd
 function cs () {
-    cd "$@" && l
+    cd "$@" && ls
     }
 # Fuction to run la after cd
 function ca () {
