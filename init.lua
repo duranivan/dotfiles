@@ -138,10 +138,10 @@ hs.hotkey.bind(hyper3, "K", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w * 0.25)
-  f.y = max.y + (max.h * 0.175)
-  f.w = max.w * 0.55
-  f.h = max.h * 0.7
+  f.x = max.x + (max.w * 0.15)
+  f.y = max.y + (max.h * 0.1)
+  f.w = max.w * 0.7
+  f.h = max.h * 0.8
   win:setFrame(f)
 end)
 
