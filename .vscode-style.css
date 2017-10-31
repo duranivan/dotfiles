@@ -23,6 +23,17 @@
   box-sizing: border-box;
 }
 
+.monaco-editor .cursors-layer.cursor-line-style > .cursor {
+  /* border-left-style: solid; */
+  /* border-left-width: 13px; */
+  /* border-left: 13px solid rgba(255, 255, 255, 0.6); */
+  border-left: 4px solid rgba(255, 198, 0, 1);
+  /* border-left: 13px solid; */
+  background: transparent !important;
+  z-index: -1;
+  position: relative;
+}
+
 /* This makes the dirty tab circle yellow */
 .vs-dark
   .monaco-workbench
