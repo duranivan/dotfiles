@@ -112,7 +112,7 @@ alias emg="/usr/local/Cellar/emacs-plus/24.5/Emacs.app/Contents/MacOS/Emacs &"
 alias emc="emacsclient -n"
 alias rstudio='open -a Rstudio'
 alias mk="open -a 'Marked 2'"
-alias code="code -r"
+alias code="code-insiders -r"
 
 # Fucntion to find directory with fzf
 function cdf () {
@@ -122,11 +122,15 @@ function cdf () {
 # Fuction to run ls after cd
 function cs () {
     cd "$@" && ls
-    }
+}
 # Fuction to run la after cd
 function ca () {
     cd "$@" && la
-    }
+}
+# Fuction to cd into just created dir
+function mkcd () {
+    mkdir -p "$1" && cd "$1"
+}
 
 
 # Base16 Shell
