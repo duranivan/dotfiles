@@ -12,16 +12,16 @@ hs.alert.show("Config loaded")
 
 -- Resize window (half size of the scree)
 
-hs.hotkey.bind(hyper, "R", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+-- hs.hotkey.bind(hyper, "R", function()
+--   local win = hs.window.focusedWindow()
+--   local f = win:frame()
+--   local screen = win:screen()
+--   local max = screen:frame()
 
-  f.w = max.w / 2
-  f.h = max.h
-  win:setFrame(f)
-end)
+--   f.w = max.w / 2
+--   f.h = max.h
+--   win:setFrame(f)
+-- end)
 
 --------------------------------------------------
 -- Move Window (nudging - not resizing)
@@ -31,7 +31,9 @@ end)
 -- h       l
 -- b   j   n
 
-hs.hotkey.bind(hyper2, "Y", function()
+delay = hs.eventtap.keyRepeatDelay()
+
+hs.hotkey.bind(hyper2, "Y", nil, nil, function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -40,15 +42,16 @@ hs.hotkey.bind(hyper2, "Y", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper2, "K", function()
+moveUp = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
   f.y = f.y - 15
   win:setFrame(f)
-end)
+end
+hs.hotkey.bind(hyper2, "K", moveUp, nil, moveUp)
 
-hs.hotkey.bind(hyper2, "U", function()
+hs.hotkey.bind(hyper2, "U", nil, nil, function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -57,23 +60,25 @@ hs.hotkey.bind(hyper2, "U", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper2, "H", function()
+moveLeft = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
   f.x = f.x - 20
   win:setFrame(f)
-end)
+end
+hs.hotkey.bind(hyper2, "H", moveLeft, nil, moveLeft)
 
-hs.hotkey.bind(hyper2, "L", function()
+moveRight = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
   f.x = f.x + 20
   win:setFrame(f)
-end)
+end
+hs.hotkey.bind(hyper2, "L", moveRight, nil, moveRight)
 
-hs.hotkey.bind(hyper2, "B", function()
+hs.hotkey.bind(hyper2, "B", nil, nil, function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -82,15 +87,16 @@ hs.hotkey.bind(hyper2, "B", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper2, "J", function()
+moveDown = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
   f.y = f.y + 15
   win:setFrame(f)
-end)
+end
+hs.hotkey.bind(hyper2, "J", moveDown, nil, moveDown)
 
-hs.hotkey.bind(hyper2, "N", function()
+hs.hotkey.bind(hyper2, "N", nil, nil, function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -154,7 +160,7 @@ hs.hotkey.bind(hyper3, "B", function()
 
   f.x = max.x + (max.w * 0.13)
   f.y = max.y + (max.h * 0.07)
-  f.w = max.w * 0.80
+  f.w = max.w * 0.75
   f.h = max.h * 0.88
   win:setFrame(f)
 end)
@@ -213,6 +219,34 @@ hs.hotkey.bind(hyper, ".", function()
   f.y = max.y + (max.h * 0.7)
   f.w = max.w / 2
   f.h = max.h * 0.3
+  win:setFrame(f)
+end)
+
+-- Move window right - smaller than half horizontal screen
+hs.hotkey.bind(hyper, "'", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x + (max.w * 0.62)
+  f.y = max.y
+  f.w = max.w * 0.38
+  f.h = max.h
+  win:setFrame(f)
+end)
+
+-- Move window left - bigger than half horizontal screen
+hs.hotkey.bind(hyper, ";", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w * 0.62
+  f.h = max.h
   win:setFrame(f)
 end)
 
@@ -306,7 +340,7 @@ hs.hotkey.bind(hyper3, "C", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w / 7.5)
+  f.x = max.x + (max.w / 6)
   f.y = max.y
   f.w = max.w / 2
   f.h = max.h
@@ -364,21 +398,21 @@ end)
 -- Hyper hjkl to switch window focus
 -----------------------------------------------
 
-hs.hotkey.bind(hyper, 'k', function()
-    hs.window.focusedWindow():focusWindowNorth()
-end)
+-- hs.hotkey.bind(hyper, 'k', function()
+--     hs.window.focusedWindow():focusWindowNorth()
+-- end)
 
-hs.hotkey.bind(hyper, 'j', function()
-    hs.window.focusedWindow():focusWindowSouth()
-end)
+-- hs.hotkey.bind(hyper, 'j', function()
+--     hs.window.focusedWindow():focusWindowSouth()
+-- end)
 
-hs.hotkey.bind(hyper, 'l', function()
-    hs.window.focusedWindow():focusWindowEast()
-end)
+-- hs.hotkey.bind(hyper, 'l', function()
+--     hs.window.focusedWindow():focusWindowEast()
+-- end)
 
-hs.hotkey.bind(hyper, 'h', function()
-    hs.window.focusedWindow():focusWindowWest()
-end)
+-- hs.hotkey.bind(hyper, 'h', function()
+--     hs.window.focusedWindow():focusWindowWest()
+-- end)
 
 -------------------------------------------------
 -- Show window hints

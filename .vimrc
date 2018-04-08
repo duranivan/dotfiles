@@ -686,7 +686,7 @@ if has("gui_running")
         " color monokai
         set lines=54
         set columns=95
-        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+        " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
     endif
 else
     " set t_Co=256
@@ -695,11 +695,11 @@ else
     " set background=dark
     " let base16colorspace=256
     " colorscheme base16-eighties
-    " color seoul256
-    color onedark
+    color seoul256
+    " color onedark
     " color monokai
     ""set lines=50
-    hi Normal ctermbg=black
+    " hi Normal ctermbg=black
 endif
 
 set linespace=3

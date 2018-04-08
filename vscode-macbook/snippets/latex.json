@@ -1,0 +1,131 @@
+{
+  /*
+	// Place your snippets for LaTeX here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+  "Quiz Template": {
+    "prefix": "quiz",
+    "body": [
+      "\\documentclass[12pt,a4paper]{article} \\usepackage[margin=3.5cm, vmargin={3cm,3cm}]{geometry}",
+      "\\usepackage{tabularx}",
+      "\\usepackage{amsmath}\n",
+      "\\begin{document}\n",
+      "\\begin{center}",
+      "\t\\textbf{Quiz ${1:number} -- Eco-${2:course code}}\\\\\\\\",
+      "\tBeaconhouse National University\\\\\\\\",
+      "\t${4:Fall} 2017",
+      "\\end{center}\n",
+      "Name: \\underline{\\hspace{2.6 in}} \\hspace{0.2 in} ID: \\underline{\\hspace{1.2 in}}\n",
+      "\\begin{enumerate}",
+      "\t\\item $5",
+      "\\end{enumerate}\n",
+      "\\end{document}"
+    ],
+    "description": "Quiz Latex Template"
+  },
+  "A4 Template": {
+    "prefix": "docA4",
+    "body": [
+      "\\documentclass[12pt,a4paper]{article} \\usepackage[margin=3.5cm, vmargin={3cm,3cm}]{geometry}",
+      "\\usepackage{tabularx}\n",
+      "\\usepackage{amsmath}",
+      "\\begin{document}",
+      "\t$1",
+      "\\end{document}"
+    ],
+    "description": "A4 size Latex Template"
+  },
+  "Beamer Template": {
+    "prefix": "beamer",
+    "body": [
+      "\\documentclass[12pt]{beamer}",
+      "%\\documentclass[12pt,trans]{beamer}",
+      "%\\documentclass[12pt,handout]{beamer}",
+      "%\\usepackage{pgfpages}",
+      "\\usepackage{amsmath}",
+      "%\\pgfpagesuselayout{2 on 1}[letterpaper, border shrink=5mm]",
+      "\\mode<presentation>",
+      "\\usetheme{Frankfurt}",
+      "%\\usetheme{Singapore}",
+      "%\\usecolortheme{seahorse}",
+      "%\\usepackage{harvard}",
+      "%\\renewcommand{\\harvardand}{and}\n",
+      "\\title{$1}",
+      "%\\institute{\\inst{1}Western Michigan University \\and \\inst{2}Universidad EAFIT}",
+      "\\institute{Beaconhouse National University}",
+      "%\\author{Michael J. Ryan\\inst{1} \\and Ivan A. Duran Diaz\\inst{2}}",
+      "\\author{Ivan A. Duran}\n",
+      "\\date{${2:Fall 2017}}\n",
+      "\\begin{document}\n",
+      "\\begin{frame}",
+      "\\titlepage",
+      "\\end{frame}\n",
+      "\\begin{frame}{${3:Slide Title}}",
+      "\t\\begin{itemize}",
+      "\t\t\\item $4",
+      "\t\\end{itemize}",
+      "\\end{frame}\n",
+      "\\end{document}"
+    ],
+    "description": "Beamer Template"
+  },
+  "Beamer-frame-with-items": {
+    "prefix": "frame_items",
+    "body": [
+      "\\begin{frame}{${1:Slide Title}}",
+      "\t\\begin{itemize}",
+      "\t\t\\item $2",
+      "\t\\end{itemize}",
+      "\\end{frame}"
+    ],
+    "description": "Beamer Frame Template with Items"
+  },
+  "Beamer-frame": {
+    "prefix": "frame",
+    "body": [
+      "\\begin{frame}{${1:Slide Title}}",
+      "\t${2:Text here}",
+      "\\end{frame}"
+    ],
+    "description": "Beamer Frame Template"
+  },
+  "Bold Surround": {
+    "prefix": "bold",
+    "body": ["\\textbf{${1:${TM_SELECTED_TEXT}}}$0"],
+    "description": "Surround with bold"
+  },
+  "Emphazisis Surround": {
+    "prefix": "emph",
+    "body": ["\\emph{${1:${TM_SELECTED_TEXT}}}$0"],
+    "description": "Surround with emphasis"
+  },
+  "Multiple Choice Question": {
+    "prefix": "mcq",
+    "body": [
+      "\\item ${1:Question...}",
+      "\\alfa",
+      "\t\\item ${2:First choice...}",
+      "\t\\item",
+      "\t\\item",
+      "\t\\item",
+      "\\fin"
+    ],
+    "description": "Inserts and MCQ with 4 options"
+  },
+  "Dfrac": {
+    "prefix": "dfrac",
+    "body": ["\\dfrac{${1:x}}{${2:y}}"],
+    "description": "Inserts \\dfrac{}{}"
+  }
+}

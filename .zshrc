@@ -1,18 +1,18 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+# export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="myown"
+# ZSH_THEME="myown"
 # ZSH_THEME="gnzh"
 # ZSH_THEME="Predawn"
 # ZSH_THEME="cobalt2"
 # ZSH_THEME="spaceship"
 # ZSH_THEME="zeit"
-SPACESHIP_DIR_SHOW=true
-SPACESHIP_PROMPT_SYMBOL="▲"
+# SPACESHIP_DIR_SHOW=true
+# SPACESHIP_PROMPT_SYMBOL="▲"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -63,7 +63,7 @@ plugins=(git autojump zsh-autosuggestions zsh-syntax-highlighting)
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/local/bin:$HOME/.fzf/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -112,7 +112,8 @@ alias emg="/usr/local/Cellar/emacs-plus/24.5/Emacs.app/Contents/MacOS/Emacs &"
 alias emc="emacsclient -n"
 alias rstudio='open -a Rstudio'
 alias mk="open -a 'Marked 2'"
-alias code="code-insiders -r"
+alias code="code -r"
+alias coin="code-insiders -r"
 
 # Fucntion to find directory with fzf
 function cdf () {
@@ -142,8 +143,6 @@ function mkcd () {
 # bindkey -v
 # bindkey fd vi-cmd-mode
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 
@@ -159,7 +158,21 @@ export GOPATH="$HOME/Dropbox/go"
 export GOBIN="$HOME/Dropbox/go/bin"
 export PATH="$HOME/Dropbox/go/bin:$PATH"
 
+# for Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Path for Composer
+
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
 # Include Z, yo
 . /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 eval $(/usr/libexec/path_helper -s)
+
+# NOTE: Zsh syntax highlighting like in Fish (Keep this last)
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

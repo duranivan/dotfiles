@@ -1,0 +1,137 @@
+{
+  "groups": [
+    {
+      "name": "golang_webdev",
+      "projects": [
+        {
+          "name": "golang_webdev_exercises",
+          "path": "~/Dropbox/go/src/github.com/user/golang_webdev_exercises"
+        },
+        {
+          "name": "golang-web-dev",
+          "path": "~/Dropbox/go/src/github.com/GoesToEleven/golang-web-dev"
+        }
+      ]
+    },
+    {
+      "name": "Go_training",
+      "projects": [
+        {
+          "name": "GolangTraining",
+          "path": "~/Dropbox/go/src/github.com/GoesToEleven/GolangTraining"
+        },
+        {
+          "name": "GolangTraining_exercises",
+          "path": "~/Dropbox/go/src/github.com/user/GolangTraining_exercises"
+        }
+      ]
+    },
+    {
+      "name": "Lazyprogrammer",
+      "projects": [
+        {
+          "name": "numpy",
+          "path": "~/Dropbox/onlinecourses/udemy/lazyprogrammer/numpy"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "tour_go",
+      "path": "~/Dropbox/go/src/github.com/user/tour_go"
+    },
+    {
+      "name": "toggle_quotes",
+      "path": "~/Dropbox/myprograms/toggle_quotes"
+    },
+    {
+      "name": "Courses-BNU",
+      "path": "~/Dropbox/BNU/Courses-BNU"
+    },
+    {
+      "name": "javascript_understanding_the_weird_parts",
+      "path": "~/Dropbox/onlinecourses/udemy/javascript_understanding_the_weird_parts"
+    },
+    {
+      "name": "Notes",
+      "path": "~/Dropbox/Notes"
+    },
+    {
+      "name": "python_tutorials",
+      "path": "~/Dropbox/onlinecourses/python_tutorials"
+    },
+    {
+      "name": "R-programming_a-z",
+      "path": "~/Dropbox/onlinecourses/udemy/a-z_courses/R-programming"
+    },
+    {
+      "name": "python_bootcamp_myfiles",
+      "path": "~/Dropbox/onlinecourses/udemy/python_bootcamp/python_bootcamp_myfiles"
+    },
+    {
+      "name": "scratching_paper",
+      "path": "~/Dropbox/onlinecourses/scratching_paper"
+    },
+    {
+      "name": "ES6 - WesBos",
+      "path": "~/Dropbox/onlinecourses/wesbos/ES6"
+    },
+    {
+      "name": "BNU_Notes",
+      "path": "~/Dropbox/BNU/BNU_Notes"
+    },
+    {
+      "name": "JavaScript30",
+      "path": "~/Dropbox/onlinecourses/wesbos/JavaScript30"
+    },
+    {
+      "name": "freecodecamp",
+      "path": "~/Dropbox/onlinecourses/freecodecamp"
+    },
+    {
+      "name": "Launchschool-130_ruby_foundations",
+      "path": "~/Dropbox/onlinecourses/launchschool/130_ruby_foundations"
+    },
+    {
+      "name": "launchschool_program",
+      "path": "~/Dropbox/onlinecourses/launchschool/launchschool_program"
+    },
+    {
+      "name": "Learn-Node",
+      "path": "~/Dropbox/onlinecourses/wesbos/Learn-Node"
+    },
+    {
+      "name": "python_django_material",
+      "path": "~/Dropbox/onlinecourses/udemy/python_django_full_stack/python_django_material"
+    },
+    {
+      "name": "web_developer_bootcamp",
+      "path": "~/Dropbox/onlinecourses/udemy/web_developer_bootcamp/material"
+    },
+    {
+      "name": "PHP_Front_To_Back",
+      "path": "~/Dropbox/onlinecourses/udemy/traversy_media/PHP_Front_To_Back"
+    },
+    {
+      "name": "cssgrid_layout_crashcourse",
+      "path": "~/Dropbox/onlinecourses/udemy/traversy_media/cssgrid_layout_crashcourse"
+    },
+    {
+      "name": "Grid_CSS_Responsive_Website",
+      "path": "~/Dropbox/onlinecourses/udemy/traversy_media/Grid_CSS_Responsive_Website_Layout"
+    },
+    {
+      "name": "css-grid_wes_bos",
+      "path": "~/Dropbox/onlinecourses/wesbos/css-grid"
+    },
+    {
+      "name": "Laravel-lsapp_traversy_media",
+      "path": "~/Dropbox/onlinecourses/udemy/traversy_media/Laravel/lsapp"
+    },
+    {
+      "name": "djangoproject-Traversy_media",
+      "path": "~/Dropbox/onlinecourses/udemy/traversy_media/django_crashcourse/djangoproject"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+PWD /Users/ivan/Library/Application Support/Code/User/snippets
+INPUT /usr/local/texlive/2016/texmf.cnf
+INPUT /usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/ivan/Library/Application Support/Code/User/snippets/latex.json
+OUTPUT latex.log
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd

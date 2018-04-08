@@ -1,0 +1,12 @@
+# Fdb version 3
+["pdflatex"] 1508306386 "/Users/ivan/Library/Application Support/Code/User/snippets/latex.json" "latex.pdf" "latex" 1508306386
+  "/Users/ivan/Library/Application Support/Code/User/snippets/latex.json" 1508306177 1201 19965a1db614e35b9c3ecfebebfcff94 ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd" 1454284088 2257 15f13452fccbf1841cc4a62831b0d32a ""
+  "/usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf" 1463093894 31953 b9489e6e586f798610c60aec1f5ec548 ""
+  "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1506040565 3873397 846a498828d956d835fd6d5dc34b30c5 ""
+  "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
+  "latex.aux" 1508305828 8 a94a2480d3289e625eea47cd1b285758 ""
+  "latex.json" 1508306177 1201 19965a1db614e35b9c3ecfebebfcff94 ""
+  (generated)
+  "latex.pdf"
+  "latex.log"

@@ -1,0 +1,332 @@
+{
+  // Place your settings in this file to overwrite the default settings
+  "color-highlight.markerType": "outline",
+  "editor.cursorBlinking": "phase",
+  // "editor.cursorStyle": "underline-thin",
+  "editor.cursorStyle": "line",
+  "editor.fontSize": 23,
+  // "editor.fontFamily": "OperatorMono-Book",
+  // "editor.fontFamily": "OperatorMonoLig-Book",
+  "editor.fontFamily": "OperatorMonoLig-Medium",
+  "editor.tabSize": 2,
+  "editor.tabCompletion": false,
+  "editor.fontLigatures": true,
+  // "editor.formatOnSave": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.showSlider": "always",
+  "editor.occurrencesHighlight": false,
+  "editor.rulers": [
+    80
+  ],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "markdown": "html",
+    "go": "html",
+    "python": "html",
+    "ejs": "html",
+  },
+  "emmet.excludeLanguages": [],
+  "editor.wordWrap": "wordWrapColumn",
+  // "files.autoSave": "onFocusChange",
+  "html.format.enable": false,
+  "guides.normal.style": "dotted",
+  "prettier.eslintIntegration": true,
+  "python.terminal.executeInFileDir": true,
+  "terminal.integrated.fontSize": 21,
+  "vim.cursorStylePerMode": {
+    // "normal": "underline"
+    // "normal": "underline-thin",
+    // "visual": "underline-thin",
+    // "visualline": "underline-thin"
+    // "insert": "line"
+  },
+  "vim.easymotion": true,
+  "vim.easymotionMarkerFontSize": "20",
+  "vim.easymotionMarkerWidthPerChar": 14,
+  "vim.easymotionMarkerHeight": 27,
+  "vim.easymotionMarkerYOffset": 20,
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "f",
+        "d"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "a"
+      ],
+      "after": [
+        "e",
+        "a"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "i"
+      ],
+      "after": [
+        "b",
+        "i"
+      ]
+    },
+    {
+      "before": [
+        "j"
+      ],
+      "after": [
+        "g",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "k"
+      ],
+      "after": [
+        "g",
+        "k"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-e>": false
+  },
+  // "workbench.iconTheme": "vscode-icons",
+  "window.zoomLevel": 0,
+  "window.openFilesInNewWindow": "off",
+  // "window.title": "${activeEditorShort}${separator}${folderName}",
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "vscode_custom_css.imports": [
+    "https://raw.githubusercontent.com/duranivan/dotfiles/master/.vscode-style.css",
+    "file:///Users/ivan/Dropbox/dotfiles/.vscode-style.css",
+    "file:///Users/Yusuf/Dropbox/dotfiles/.vscode-style.css",
+    "file:///Users/idd/Dropbox/dotfiles/.vscode-style.css"
+  ],
+  // Configure editor settings to be overridden for [markdown] language.
+  "[javascript]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+  },
+  "[html]": {
+    "editor.wordWrapColumn": 70,
+    "editor.formatOnSave": true,
+  },
+  "[markdown]": {
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 60,
+    "editor.quickSuggestions": true
+  },
+  "[latex]": {
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 60,
+    "editor.quickSuggestions": true,
+    "editor.minimap.enabled": false
+  },
+  "[php]": {
+    "editor.tabSize": 4
+  },
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  "[go]": {
+    "editor.tabSize": 4
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "macros": {
+    "copyCommentLine": [
+      "editor.action.addCommentLine",
+      "editor.action.copyLinesDownAction",
+      "editor.action.removeCommentLine",
+    ],
+    "endwithsemicolon": [
+      "cursorLineEnd",
+      "my_snippet",
+      {
+        "command": "editor.action.insertSnippet",
+        "args": {
+          "snippet": ";"
+        }
+      }
+    ],
+    "surroundWordSingleQuotes": [
+      "editor.action.addSelectionToNextFindMatch",
+      "my_snippet",
+      {
+        "command": "editor.action.insertSnippet",
+        "args": {
+          "snippet": "'$TM_SELECTED_TEXT$1'$0"
+        }
+      }
+    ],
+    "surroundWordQuotes": [
+      "editor.action.addSelectionToNextFindMatch",
+      "my_snippet",
+      {
+        "command": "editor.action.insertSnippet",
+        "args": {
+          "snippet": "\"$TM_SELECTED_TEXT$1\"$0"
+        }
+      }
+    ],
+    "surroundWordParens": [
+      "editor.action.addSelectionToNextFindMatch",
+      "my_snippet",
+      {
+        "command": "editor.action.insertSnippet",
+        "args": {
+          "snippet": "($TM_SELECTED_TEXT$1)$0"
+        }
+      }
+    ],
+    "surroundWordBrackets": [
+      "editor.action.addSelectionToNextFindMatch",
+      "my_snippet",
+      {
+        "command": "editor.action.insertSnippet",
+        "args": {
+          "snippet": "[$TM_SELECTED_TEXT$1]$0"
+        }
+      }
+    ],
+    "surroundWordCurly": [
+      "editor.action.addSelectionToNextFindMatch",
+      "my_snippet",
+      {
+        "command": "editor.action.insertSnippet",
+        "args": {
+          "snippet": "{$TM_SELECTED_TEXT$1}$0"
+        }
+      }
+    ]
+  },
+  "cSpell.userWords": [
+    "Econometrics",
+    "microeconomic",
+    "parens"
+  ],
+  "workbench.colorTheme": "Cobalt2",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.eol": "\n",
+  "files.associations": {
+    "*.fish": "fish",
+    "*.gohtml": "html",
+    "*.php": "php"
+  },
+  "spellright.language": "english",
+  "workbench.fontAliasing": "antialiased",
+  "go.autocompleteUnimportedPackages": true,
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.nav",
+    "*.snm",
+    "*.synctex.gz"
+  ],
+  "bookmarks.saveBookmarksInProject": true,
+  "workbench.panel.location": "bottom",
+  "sublimeTextKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true,
+  "rust.mode": "rls",
+  "rust.rustup": {
+    "toolchain": "stable-x86_64-apple-darwin",
+    "nightlyToolchain": "nightly-x86_64-apple-darwin"
+  },
+  "workbench.activityBar.visible": true,
+  "rewrap.doubleSentenceSpacing": true,
+  "projects.configPath": "",
+  "material-icon-theme.showWelcomeMessage": false,
+  "materialTheme.cache.workbench.settings": {
+    "themeColours": "Default"
+  },
+  "material-icon-theme.folders.theme": "specific",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": true,
+    "suppressWelcomeNotice": true
+  },
+  "python.autoComplete.addBrackets": true,
+  "prettier.tabWidth": 4,
+  "markJump.maximumLimit": 2056,
+  "workbench.editor.tabSizing": "shrink",
+  "python.linting.pylintArgs": [
+    "--disable=C0111",
+    "--disable=C0103"
+  ],
+  "editor.renderIndentGuides": false,
+  "vim.disableExtension": false,
+  "editor.cursorWidth": 3,
+  "[ejs]": {
+    
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "cosmosDB.showSavePrompt": false,
+  "markJump.additionalNotePatterns": [
+    "#\\s*(?<heading>\\>+)?\\s*[Nn][Oo][Tt][Ee]\\s*(\\((?<writer>[^\\)]+)\\))?\\s*:\\s*(?<description>.+)$"
+  ],
+  "zenMode.fullScreen": false,
+  "gitlens.keymap": "chorded",
+  "material-icon-theme.showUpdateMessage": false,
+  "editor.matchBrackets": false,
+  "php.suggest.basic": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "search.location": "panel",
+  "scrolloff.alwaysCenter": true,
+  // "python.pythonPath": "/Users/ivan/anaconda/bin/python",
+  // "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
+}

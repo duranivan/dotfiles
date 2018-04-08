@@ -5,7 +5,7 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 18,
+    fontSize: 19,
 
     // font family with optional fallbacks
     fontFamily: 'Operator Mono, Fira Code, Source Code Pro, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -24,7 +24,7 @@ module.exports = {
     foregroundColor: '#fff',
 
     // terminal background color
-    backgroundColor: '#000',
+    backgroundColor: '#15232d',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -87,7 +87,7 @@ module.exports = {
     bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: false
+    copyOnSelect: false,
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
@@ -97,6 +97,8 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    modifierKeys: { altIsMeta: true },
   },
 
   // a list of plugins to fetch and install from npm

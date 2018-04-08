@@ -1,0 +1,474 @@
+[
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "center-editor-window.center",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+shift+t",
+    "command": "terminalHere.create"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-center-editor-window.center",
+    "when": "editorTextFocus"
+  },
+  // {
+  //   "key": "ctrl+shift+up",
+  //   "command": "editor.action.insertCursorAbove",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "key": "alt+cmd+up",
+  //   "command": "-editor.action.insertCursorAbove",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "key": "ctrl+shift+down",
+  //   "command": "editor.action.insertCursorBelow",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "key": "alt+cmd+down",
+  //   "command": "-editor.action.insertCursorBelow",
+  //   "when": "editorTextFocus"
+  // },
+  {
+    "key": "alt+=",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": " => "
+    }
+  },
+  {
+    "key": "alt+-",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": " <- "
+    }
+  },
+  {
+    "key": "cmd+shift+,",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert'",
+    // "when": "editorTextFocus",
+    "args": {
+      "snippet": "<%${1:=} $TM_SELECTED_TEXT$2 %>$0"
+    }
+  },
+  {
+    "key": "ctrl+down",
+    "command": "editor.emmet.action.decrementNumberByOne"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "editor.emmet.action.incrementNumberByOne"
+  },
+  {
+    "key": "alt+ctrl+up",
+    "command": "editor.emmet.action.incrementNumberByOneTenth"
+  },
+  {
+    "key": "alt+ctrl+down",
+    "command": "editor.emmet.action.decrementNumberByOneTenth"
+  },
+  {
+    "key": "alt+cmd+up",
+    "command": "editor.emmet.action.incrementNumberByTen"
+  },
+  {
+    "key": "alt+cmd+down",
+    "command": "editor.emmet.action.decrementNumberByTen"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.focusPanel"
+  },
+  // Toggle between terminal and editor focus
+  { "key": "ctrl+t", "command": "workbench.action.terminal.focus" },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when":
+      "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when":
+      "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "acceptSelectedSuggestionOnEnter",
+    "when": "acceptSuggestionOnEnter && editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+cmd+space",
+    "command": "closeParameterHints",
+    "when": "editorTextFocus && parameterHintsVisible"
+  },
+  {
+    "key": "shift+'",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert'",
+    // "when": "editorTextFocus",
+    "args": { "snippet": "\"$TM_SELECTED_TEXT$1\"$0" }
+  },
+  {
+    "key": "'",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert'",
+    // "when": "editorTextFocus",
+    "args": { "snippet": "'$TM_SELECTED_TEXT$1'$0" }
+  },
+  {
+    "key": "`",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert'",
+    // "when": "editorTextFocus",
+    "args": { "snippet": "`$TM_SELECTED_TEXT$1`$0" }
+  },
+  {
+    "key": "shift+9",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert'",
+    // "when": "editorTextFocus",
+    "args": { "snippet": "($TM_SELECTED_TEXT$1)$0" }
+  },
+  {
+    "key": "[",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert'",
+    // "when": "editorTextFocus",
+    "args": { "snippet": "[$TM_SELECTED_TEXT$1]$0" }
+  },
+  {
+    "key": "shift+[",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert'",
+    // "when": "editorTextFocus",
+    "args": { "snippet": "{$TM_SELECTED_TEXT$1}$0" }
+  },
+  {
+    "key": "cmd+alt+b",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert' && resourceLangId == latex",
+    // "when": "editorTextFocus",
+    "args": {
+      "snippet": "\\textbf{$TM_SELECTED_TEXT}"
+    }
+  },
+  {
+    "key": "cmd+alt+b",
+    "command": "editor.action.insertSnippet",
+    // "when": "editorTextFocus && vim.mode == 'Insert' && resourceLangId == markdown",
+    "when": "editorTextFocus && resourceLangId == markdown",
+    // "when": "editorTextFocus",
+    "args": {
+      "snippet": "**$TM_SELECTED_TEXT$1**$0"
+    }
+  },
+  {
+    "key": "cmd+alt+e",
+    "command": "editor.action.insertSnippet",
+    // "when": "editorTextFocus && vim.mode == 'Insert' && resourceLangId == markdown",
+    "when": "editorTextFocus && && resourceLangId == markdown",
+    // "when": "editorTextFocus",
+    "args": {
+      "snippet": "_$TM_SELECTED_TEXT$1_$0"
+    }
+  },
+  {
+    "key": "cmd+alt+e",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert' && resourceLangId == latex",
+    "args": {
+      "snippet": "\\\\${1:emph}{$TM_SELECTED_TEXT$2}$0"
+    }
+  },
+  {
+    "key": "shift+4",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && vim.mode == 'Insert' && resourceLangId == javascript",
+    "args": {
+      "snippet": "\\${$TM_SELECTED_TEXT$1}$0"
+    }
+  },
+  {
+    "command": "emmet.expandAbbreviation",
+    "key": "ctrl+x"
+  },
+  {
+    "command": "editor.emmet.action.wrapIndividualLinesWithAbbreviation",
+    "key": "ctrl+shift+w"
+  },
+  {
+    "key": "alt+'",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": { "snippet": "'" }
+  },
+  // {
+  //   "key": "alt+`",
+  //   "command": "editor.action.insertSnippet",
+  //   "when": "editorTextFocus",
+  //   "args": { "snippet": "`" }
+  // },
+  {
+    "key": "ctrl+alt+shift+'",
+    "command": "macros.surroundWordQuotes"
+  },
+  {
+    "key": "ctrl+alt+shift+9",
+    "command": "macros.surroundWordParens"
+  },
+  {
+    "key": "ctrl+alt+[",
+    "command": "macros.surroundWordBrackets"
+  },
+  {
+    "key": "ctrl+alt+shift+[",
+    "command": "macros.surroundWordCurly"
+  },
+  {
+    "key": "ctrl+alt+'",
+    "command": "macros.surroundWordSingleQuotes"
+  },
+  {
+    "key": "ctrl+shift+;",
+    "command": "macros.endwithsemicolon"
+  },
+  {
+    "key": "cmd+alt+shift+d",
+    "command": "macros.copyCommentLine"
+  },
+  {
+    "command": "editor.action.smartSelect.grow",
+    "key": "ctrl+alt+right",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "editor.action.smartSelect.shrink",
+    "key": "ctrl+alt+left",
+    "when": "editorTextFocus"
+  },
+  // {
+  //   "key": "cmd+d",
+  //   "command": "-extension.vim_cmd+d",
+  //   "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+  // },
+  {
+    "key": "ctrl+x",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when":
+      "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "tab",
+    "command": "-editor.emmet.action.expandAbbreviation",
+    "when":
+      "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "insertSnippet",
+    "when":
+      "config.editor.tabCompletion && editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
+  },
+  {
+    "key": "tab",
+    "command": "-insertSnippet",
+    "when":
+      "config.editor.tabCompletion && editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "acceptSelectedSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "editor.action.previewDeclaration",
+    "when":
+      "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "alt+f12",
+    "command": "-editor.action.previewDeclaration",
+    "when":
+      "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "spaceBlockJumper.moveUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+]",
+    "command": "spaceBlockJumper.moveDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+[",
+    "command": "spaceBlockJumper.selectUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+]",
+    "command": "spaceBlockJumper.selectDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+cmd+u",
+    "command": "toggleVim"
+  },
+  {
+    "key": "ctrl+shift+'",
+    "command": "bookmarks.listFromAllFiles"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "bookmarks.list"
+  },
+  {
+    "key": "cmd+shift+'",
+    "command": "markJump.jumpToProjectMarks"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "shift+alt+cmd+j",
+    "command": "workbench.action.togglePanelPosition"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-extension.vim_ctrl+pageup",
+    "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-extension.vim_ctrl+pagedown",
+    "when":
+      "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
+  },
+  {
+    "key": "alt+k",
+    "command": "scrollLineUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "-scrollLineUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+j",
+    "command": "scrollLineDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "-scrollLineDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+cmd+up",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "ctrl+alt+cmd+down",
+    "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "ctrl+alt+cmd+0",
+    "command": "workbench.action.evenEditorWidths"
+  },
+  {
+    "key": "ctrl+alt+cmd+m",
+    "command": "workbench.action.maximizeEditor"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "enter",
+    "command": "-acceptSelectedSuggestionOnEnter",
+    "when": "acceptSuggestionOnEnter && editorTextFocus && suggestWidgetVisible && suggestionMakesTextEdit"
+  },
+  {
+    "key": "alt+cmd+q",
+    "command": "extension.wrapLines",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+w",
+    "command": "-extension.wrapLines",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+f5",
+    "command": "workbench.action.debug.continue",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.continue",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "cmd+f5",
+    "command": "workbench.action.debug.start",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.start",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "alt+cmd+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "-workbench.view.debug"
+  },
+  {
+    "key": "ctrl+alt+cmd+c",
+    "command": "workbench.action.toggleCenteredLayout"
+  },
+  {
+    "key": "shift+cmd+w",
+    "command": "-workbench.action.closeWindow"
+  }
+]
