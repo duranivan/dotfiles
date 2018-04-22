@@ -401,6 +401,10 @@ hs.hotkey.bind(hyper, ']', function()
     hs.window.switcher.nextWindow()
 end)
 
+hs.hotkey.bind("alt", "tab", function()
+    hs.window.switcher.nextWindow()
+end)
+
 hs.hotkey.bind(hyper, '[', function()
     hs.window.switcher.previousWindow()
 end)
