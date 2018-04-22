@@ -397,6 +397,13 @@ end)
 -----------------------------------------------
 -- Hyper hjkl to switch window focus
 -----------------------------------------------
+hs.hotkey.bind(hyper, ']', function()
+    hs.window.switcher.nextWindow()
+end)
+
+hs.hotkey.bind(hyper, '[', function()
+    hs.window.switcher.previousWindow()
+end)
 
 -- hs.hotkey.bind(hyper, 'k', function()
 --     hs.window.focusedWindow():focusWindowNorth()
