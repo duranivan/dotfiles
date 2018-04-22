@@ -426,6 +426,22 @@ end)
 -- end)
 
 -------------------------------------------------
+-- Focus particular apps
+-------------------------------------------------
+
+hs.hotkey.bind("cmd", "1", function()
+  hs.application.launchOrFocus("Google Chrome")
+end)
+
+hs.hotkey.bind("cmd", "2", function()
+  hs.application.launchOrFocus("Visual Studio Code - Insiders")
+end)
+
+hs.hotkey.bind("cmd", "3", function()
+  hs.application.launchOrFocus("Quiver")
+end)
+
+-------------------------------------------------
 -- Show window hints
 -------------------------------------------------
 hs.hints.showTitleThresh = 0
