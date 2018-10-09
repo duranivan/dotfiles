@@ -305,16 +305,6 @@
       "name": "Keyword",
       "scope": "keyword, storage.type.class.js",
       "settings": {
-        "fontStyle": "italic bold",
-        "foreground": "#ff9d00"
-      }
-    },
-    {
-      "name": "Keyword Logic Operator, Assigment, Arithmetic",
-      // "scope": "keyword.operator.logical, keyword.operator.comparison, keyword.operator.assignment, keyword.operator.arithmetic, keyword.operator.relational, keyword.operator.ternary, keyword.operator.type.annotation",
-      "scope": "keyword.operator",
-      "settings": {
-        "fontStyle": "",
         "foreground": "#ff9d00"
       }
     },
@@ -357,7 +347,6 @@
       "name": "Storage",
       "scope": "storage",
       "settings": {
-        "fontStyle": "italic bold",
         "foreground": "#ffc600"
       }
     },
@@ -365,7 +354,6 @@
       "name": "Storage Type Arrow Function",
       "scope": "storage.type.function.arrow",
       "settings": {
-        "fontStyle": "",
         "foreground": "#ffc600"
       }
     },
@@ -550,18 +538,9 @@
       }
     },
     {
-      "name": "Function arguments",
-      "scope": ["variable.parameter", "parameters variable.function"],
-      "settings": {
-        "fontStyle": "italic bold",
-        "foreground": "#e1efff"
-      }
-    },
-    {
       "name": "[JAVASCRIPT] - Storage Type Function",
       "scope": "source.js storage.type.function",
       "settings": {
-        "fontStyle": "italic bold",
         "foreground": "#fb94ff"
       }
     },
@@ -569,7 +548,6 @@
       "name": "[JAVASCRIPT] - Variable Language",
       "scope": "variable.language, entity.name.type.class.js",
       "settings": {
-        "fontStyle": "italic bold",
         "foreground": "#fb94ff"
       }
     },
@@ -581,25 +559,9 @@
       }
     },
     {
-      "name": "[JAVASCRIPT - EJS] - Tags",
-      "scope": "keyword.begin.tag.ejs",
-      "settings": {
-        "fontStyle": ""
-      }
-    },
-    {
       "name": "[PYTHON] - Self Argument",
       "scope": "variable.parameter.function.language.special.self.python",
       "settings": {
-        "fontStyle": "italic bold",
-        "foreground": "#fb94ff"
-      }
-    },
-    {
-      "name": "[PYTHON] - Storage Type Function",
-      "scope": "source.python storage.type.function",
-      "settings": {
-        "fontStyle": "italic bold",
         "foreground": "#fb94ff"
       }
     },
