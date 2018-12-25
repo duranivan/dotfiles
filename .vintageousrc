@@ -1,2 +1,19 @@
-:nmap j gj
-:nmap k gk
+:nnoremap j gjzz
+:nnoremap k gkzz
+
+" " Implement typewriter mode
+" inoremap <CR> <CR><esc>zza
+" inoremap <Up> <Up><esc>zza
+" inoremap <Down> <Down><esc>zza
+" nnoremap j gjzz
+" nnoremap k gkzz
+
+" set scrolloff=999
+
+
+let mapleader=<space>
+nnoremap <leader>r :GotoSymbolInProject<CR>
+nnoremap <leader>d :ToggleSideBar<CR>
+nnoremap <leader>l :AceJumpWithinLine<CR>
+nnoremap <leader>. :AceJumpLine<CR>
+nnoremap <leader>w :AceJumpWord<CR>
