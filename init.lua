@@ -1,13 +1,22 @@
+-- Load extra files
+
+-- require("other_configs.cherry")
+
 -- Set up
 local hyper  = {"ctrl", "cmd", "alt"}
 local hyper2 = {"shift", "ctrl", "cmd", "alt"}
 local hyper3 = {"shift", "ctrl", "cmd"}
+local hyper4 = {"shift", "cmd", "alt"}
 
 -- Reload config
 hs.hotkey.bind({"alt", "ctrl"}, "1", function()
   hs.reload()
 end)
 hs.alert.show("Config loaded")
+
+
+-- Toggle console
+hs.hotkey.bind(hyper, "Y", hs.toggleConsole)
 
 
 -- Resize window (half size of the scree)
@@ -347,6 +356,42 @@ hs.hotkey.bind(hyper3, "C", function()
   win:setFrame(f)
 end)
 
+-- Center Window (does not resize) both horizontally and vertically
+hs.hotkey.bind(hyper4, "C", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x + (max.w - f.w)/2
+  f.y = max.y + (max.h - f.h)/2
+  win:setFrame(f)
+end)
+
+-- Move Window far right (does not resize) center vertically
+hs.hotkey.bind(hyper4, "R", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x + (max.w - f.w)
+  f.y = max.y + (max.h - f.h)/2
+  win:setFrame(f)
+end)
+
+-- Move Window far left (does not resize) center vertically
+hs.hotkey.bind(hyper4, "L", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y + (max.h - f.h)/2
+  win:setFrame(f)
+end)
+
 -- Full screen
 hs.hotkey.bind(hyper3, "F", function()
   local win = hs.window.focusedWindow()
@@ -429,25 +474,43 @@ end)
 -- Focus particular apps
 -------------------------------------------------
 
-hs.hotkey.bind("cmd", "1", function()
+hs.hotkey.bind("alt", "0", function()
+  hs.application.launchOrFocus("PhpStorm")
+end)
+
+hs.hotkey.bind("alt", "S", function()
+  hs.application.launchOrFocus("Sublime Text")
+end)
+
+hs.hotkey.bind("alt", "1", function()
+  hs.application.launchOrFocus("Safari")
+end)
+
+hs.hotkey.bind("alt", "3", function()
+  -- hs.application.launchOrFocus("Visual Studio Code - Insiders")
+  hs.application.launchOrFocus("Visual Studio Code")
+end)
+
+hs.hotkey.bind("alt", "2", function()
   hs.application.launchOrFocus("Google Chrome")
+  -- hs.application.launchOrFocus("FirefoxNightly")
+  -- hs.application.launchOrFocus("Firefox Developer Edition")
+  -- hs.application.launchOrFocus("Quiver")
+  -- hs.application.launchOrFocus("UlyssesMac")
 end)
 
-hs.hotkey.bind("cmd", "2", function()
-  hs.application.launchOrFocus("Visual Studio Code - Insiders")
-end)
-
-hs.hotkey.bind("cmd", "3", function()
-  hs.application.launchOrFocus("Quiver")
+hs.hotkey.bind("alt", "4", function()
+  -- hs.application.launchOrFocus("WorkFlowy")
+  hs.application.launchOrFocus("Sketch")
 end)
 
 -------------------------------------------------
 -- Show window hints
 -------------------------------------------------
-hs.hints.showTitleThresh = 0
-hs.hotkey.bind("ctrl", ";", function()
-    hs.hints.windowHints()
-end)
+-- hs.hints.showTitleThresh = 0
+-- hs.hotkey.bind("ctrl", ";", function()
+--     hs.hints.windowHints()
+-- end)
 
 -------------------------------------------------
 -- Move window to next display (East or West)
@@ -467,3 +530,29 @@ end
 
 hs.hotkey.bind(hyper3, "right", moveWindowNext)
 hs.hotkey.bind(hyper3, "left", moveWindowPrev)
+
+
+-------------------------------------------------
+-- Window layouts
+-------------------------------------------------
+
+local samsungScreen = "S27D590"
+local iMacScreen = "iMac"
+
+applyCodingLayout = function()
+  -- local win = hs.window.focusedWindow()
+  -- local f = win:frame()
+  -- local screen = win:screen()
+  -- local max = screen:frame()
+
+  hs.application.launchOrFocus("Visual Studio Code")
+  hs.application.launchOrFocus("Google Chrome")
+
+  -- local codingLayout = {
+  --   {"Google Chrome", nil, samsungScreen, nil, nil, hs.geometry.rect(max.x + (max.w * 0.13), max.y + (max.h * 0.07), max.w * 0.75, max.h * 0.88)},
+  --   {"Visual Studio Code", nil, iMacScreen, nil, nil, hs.geometry.rect(max.x + (max.w * 0.13), max.y + (max.h * 0.07), max.w * 0.75, max.h * 0.88)}
+  -- }
+  -- hs.layout.apply(codingLayout)
+end
+
+hs.hotkey.bind(hyper, "1", applyCodingLayout)
