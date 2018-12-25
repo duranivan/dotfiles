@@ -132,7 +132,12 @@ function ca () {
 function mkcd () {
     mkdir -p "$1" && cd "$1"
 }
-
+# Function to create file and together with path recursively.
+function mkf () {
+    DIR=$(dirname "$1")
+    FILE=$(basename "$1")
+    mkcd "${DIR}" && touch "${FILE}" 
+}
 
 # Base16 Shell
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
@@ -150,7 +155,6 @@ export GIT_HOME='/usr/local/Cellar/git/2.7.0/bin'
 
 export PATH=$GIT_HOME:$PATH
 export PATH="$PATH:/Users/Yusuf/bin:/Library/TeX/Distributions/Programs/texbin/"
-export PATH="$HOME/anaconda/bin:$PATH"
 
 # for GO programmming
 export GOROOT="/usr/local/go"
@@ -178,3 +182,9 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# make vim the PAGER reader for psql
+# export PAGER='vim -R -u ~/.vimrcpg -'
+
+# Add homebrew's python3 and pip3 as default (so no need to add the 3 at the end)
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
