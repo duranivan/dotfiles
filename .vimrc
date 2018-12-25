@@ -61,6 +61,11 @@ Plug 'honza/vim-snippets'
 Plug 'vim-ruby/vim-ruby'
 Plug 'junegunn/vim-easy-align'
 Plug 'joshdick/onedark.vim'
+Plug 'haishanh/night-owl.vim'
+Plug 'alcesleo/vim-uppercase-sql'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'mikewest/vimroom'
 
 " Html Bundles
 Plug 'alvan/vim-closetag' "html
@@ -88,11 +93,28 @@ inoremap <F6> <C-o>:setlocal spell! spelllang=en_us<CR>
 
 
 " Rebind <Leader> key
-let mapleader = "\<Space>"
-
+let mapleader = ","
+" let mapleader = "\<Space>"
 
 " Mouse
 " set mouse=a   "on OSX press ALT and click
+
+" Show mode not neccessary since using lightline
+set noshowmode
+
+" Center screen around cursor in insert mode and normal mode
+inoremap <C-L> <esc>zza
+
+" " Implement typewriter mode
+" inoremap <CR> <CR><esc>zza
+" inoremap <Up> <Up><esc>zza
+" inoremap <Down> <Down><esc>zza
+" nnoremap j gjzz
+" nnoremap k gkzz
+set scrolloff=999
+
+" Toggle VimRoom
+nnoremap <silent> <Leader>mz :VimroomToggle<CR>
 
 
 " Surround highlighted text in quotes
@@ -171,10 +193,13 @@ nnoremap rr O<esc>Dj0
 nnoremap tt o<esc>Dk0
 
 
-" Go to end and beginning of line in mode
+" Go to end and beginning of line in normal mode
 nnoremap W $
 nnoremap Q ^
 
+" Go to end and beginning of line in insert mode
+inoremap <C-a> <esc>0i
+inoremap <C-e> <esc>$a
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
@@ -240,8 +265,8 @@ nmap <leader>bl :ls<CR>
 
 
 
-set tabstop=2  " number of space characters inserted when tab key is pressed
-set shiftwidth=2  " number of space characters inserted for indentation
+set tabstop=4  " number of space characters inserted when tab key is pressed
+set shiftwidth=4  " number of space characters inserted for indentation
 set expandtab  " inserts spaces when tab key is pressed
 " set softtabstop=2  " makes the spaces feel like real tabs
 set smartindent
@@ -289,9 +314,10 @@ set number  " show line numbers
 set wrap
 set linebreak
 set nolist
+
 " Move up and down with wrapped lines
-nnoremap k gk
-nnoremap j gj
+" nnoremap k gk
+" nnoremap j gj
 
 
 " Wrap-unwrap variable for string interpolation in Ruby
@@ -392,19 +418,20 @@ nmap <leader>b :Buffers<CR>
 " let g:indentLine_showFirstIndentLevel = 1
 " let g:indentLine_indentLevel = 5
 " let g:indentLine_fileType = ['ruby', 'python']
+" let g:indentLine_char = '│'
 
 
-" Setting for indent-guides
-let g:indent_guides_indent_levels = 10
-let g:indent_guides_guide_size = 1
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-let g:indent_guides_auto_colors = 0
-augroup Indent_Guides
-  autocmd!
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
-augroup END
+" " Setting for indent-guides
+" let g:indent_guides_indent_levels = 10
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+" let g:indent_guides_auto_colors = 0
+" augroup Indent_Guides
+"   autocmd!
+"   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
+"   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
+" augroup END
 
 " Nowrapping for Html files
 " autocmd BufNewFile,BufRead *.html setlocal nowrap
@@ -426,7 +453,7 @@ nnoremap <F10>c :PrevimOpen<CR>
 
 
 " " Settings for Youcompleteme
-let g:ycm_filetype_blacklist = {}
+let g:ycm_filetype_blacklist = {'sql': 1}
 " let g:ycm_filetype_blacklist = {
 "     \ 'tagbar' : 1,
 "     \ 'qf' : 1,
@@ -657,8 +684,13 @@ nnoremap [<space> :lprevious<CR>
 " ======================== Color Schemes ============================
 " syntax on
 
-set cursorline      " Higjlights current line
+" set cursorline      " Highlights current line
 
+""""" enable 24bit true color
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " Settings for Solarized
 " cd ~/.vim/bundle
@@ -671,11 +703,13 @@ if has("gui_running")
         " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h17
         " set guifont=Fira\ Code:h18
         " set guifont=Source\ Code\ Pro\ for\ Powerline:h18
+        set guifont=Operator\ Mono\ Light:h20
         set linespace=3
         " color seoul256
         " color monokai
         " let base16colorspace=256
         " colorscheme base16-eighties
+        colorscheme night-owl
     else 
         ""set background=dark
         ""set background=light
@@ -684,9 +718,11 @@ if has("gui_running")
         ""call togglebg#map("<F5>")
         " color seoul256
         " color monokai
+        colorscheme night-owl
         set lines=54
         set columns=95
         " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+        " set guifont=Operator\ Mono\ Light\ 20
     endif
 else
     " set t_Co=256
@@ -695,7 +731,8 @@ else
     " set background=dark
     " let base16colorspace=256
     " colorscheme base16-eighties
-    color seoul256
+    " color seoul256
+    colorscheme night-owl
     " color onedark
     " color monokai
     ""set lines=50
@@ -703,6 +740,7 @@ else
 endif
 
 set linespace=3
+
 
 "" colorscheme torte
 "" colorscheme desert
