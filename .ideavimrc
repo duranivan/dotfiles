@@ -1,0 +1,49 @@
+" " Extensions
+set surround
+
+" " Leader key
+" let mapleader = ","
+
+" " Leave insert mode
+inoremap fd <Esc>
+
+" " Copy (delete) to clipboard
+" set clipboard+=unnamed
+vnoremap , :action EditorCopy<CR>:action EditorEscape<CR>
+nnoremap ,, V:action EditorCopy<CR>:action EditorEscape<CR>
+vnoremap m :action EditorCopy<CR>:action EditorDeleteLine<CR>
+nnoremap mm :action VimVisualToggleLineMode<CR>:action EditorCopy<CR>:action EditorDeleteLine<CR>:action VimVisualToggleLineMode<CR>
+
+" " Paste from clipboard after or before line
+nnoremap t o<Esc>:action EditorPaste<CR>
+nnoremap T O<Esc>:action EditorPaste<CR>
+
+" " Implement typewriter mode
+inoremap <CR> <CR><esc>zza
+inoremap <Up> <Up><esc>zza
+inoremap <Down> <Down><esc>zza
+nnoremap j gjzz
+nnoremap k gkzz
+
+" " Insert ';' at end of line
+inoremap <C-S-;> <esc>$a;
+nnoremap <C-S-;> $a;<esc>
+
+" " Go to end and beginning of line in insert mode
+" " Go to end and beginning of line in insert mode
+inoremap <C-a> <esc>0i
+inoremap <C-e> <esc>$a
+
+" " Select with shift + arrows
+nmap <S-Up> <S-v><Up>
+nmap <S-Down> <S-v><Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up> <Up>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+vmap <S-Right> <Right>
+imap <S-Up> <Esc><S-v><Up>
+imap <S-Down> <Esc><S-v><Down>
+imap <S-Left> <Esc>v<Left>
+imap <S-Right> <Esc>v<Right>
