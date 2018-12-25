@@ -1,0 +1,39 @@
+{
+    // Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "Jupyter Cell": {
+        "prefix": "jup",
+        "body": ["#%%$1"],
+        "description": "Insert Jupyter Cell"
+    },
+    "Transform np array to dataframe": {
+        "prefix": "tdf",
+        "body": ["pd.DataFrame(data=${1:X}, ${2:columns=None})"],
+        "description": "Transform a numpy array into a pandas dataframe"
+    },
+    "Transform multiple np arrays to dataframe": {
+        "prefix": "tdfm",
+        "body": [
+            "pd.DataFrame(data=np.array([${1:X1}, ${2:X2}]).T)${3:.head(10)}"
+        ],
+        "description": "Transform multiple numpy arrays into a pandas dataframe"
+    },
+    "Method Surround": {
+        "prefix": "sur",
+        "body": [
+					"${2:print}(${1:$TM_SELECTED_TEXT})"
+				],
+        "description": "Selection Method Surround"
+    },
+}

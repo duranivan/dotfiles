@@ -1,29 +1,77 @@
 {
-	// Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
-	"PHP Script": {
-		"prefix": "php",
-		"body": [
-			"<?php",
-			"\t$1",
-			"?>"
-		],
-		"description": "Inserts PHP script <?php...?>"
-	},
-	"PHP Script One Line": {
-		"prefix": "ph1",
-		"body": [ "<?php $1 ?>" ],
-		"description": "Inserts PHP script <?php...?> one liner"
-	}
+    // Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "PHP Script": {
+        "prefix": "php",
+        "body": ["<?php", "\t$1", "?>"],
+        "description": "Inserts PHP script <?php...?>"
+    },
+    "PHP Echo": {
+        "prefix": "p=",
+        "body": ["<?= $1;?>"],
+        "description": "Inserts PHP script <?=...?>"
+    },
+    "PHP Script Short": {
+        "prefix": "ph",
+        "body": [
+            "<?php",
+            // "\t$1",
+            "$1"
+        ],
+        "description": "Inserts PHP script <?php"
+    },
+    "Vue Base - HTML": {
+        "prefix": "vbase",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang=\"en\">",
+            "<head>",
+            "  <meta charset=\"UTF-8\">",
+            "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+            "  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+            "  <!-- <link rel=\"stylesheet\" href=\"https: //cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css\"> -->",
+            "  <title>${1:Document}</title>",
+            "</head>",
+            "<body>",
+            "  <div id=\"root\">",
+            "    $2",
+            "  </div>",
+            "",
+            "  <script src=\"https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js\"></script>",
+            "  <!-- <script src=\"../vue.js\"></script> -->",
+            "",
+            "  <script>",
+            "    var app = new Vue({",
+            "      el: '#root',",
+            "      data: {",
+            "        message: 'Hello World',",
+            "               }",
+            "           })",
+            "  </script>  ",
+            "</body>",
+            "</html>"
+        ],
+        "description": "Inserts Vue Base in HTML files"
+    },
+    "PHP Script One Line": {
+        "prefix": "ph1",
+        "body": ["<?php $1 ?>"],
+        "description": "Inserts PHP script <?php...?> one liner"
+    },
+    "Code inline text": {
+        "prefix": "cod",
+        "body": ["<code>$1</code>"],
+        "description": "Code inline text"
+    }
 }

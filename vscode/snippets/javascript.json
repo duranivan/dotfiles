@@ -16,15 +16,31 @@
 */
   "Print to console": {
     "prefix": "cl",
-    "body": ["console.log($1);"],
+    "body": [
+			"${2:console.log}(${1:$TM_SELECTED_TEXT})"
+		],
     "description": "Log output to console"
 	},
 	"Require module": {
 		"prefix": "req",
 		"body": [
-			"const $1 = require('$1$2');$0"
+			"const $1 = require('${2:$1}');"
+		],
+		"description": "Require module"
+	},
+	"Import module": {
+		"prefix": "imp",
+		"body": [
+			"import $1 from '$2';$0"
 		],
 		"description": "Import module"
+	},
+	"Import React - Component": {
+		"prefix": "impr",
+		"body": [
+			"import React${1:, { Component \\}} from 'react';$0"
+		],
+		"description": "Import React with Component"
 	},
 	"Get request": {
 		"prefix": "get",
@@ -44,4 +60,13 @@
 		],
 		"description": "Post router - Express"
 	},
+	"Block Surround": {
+		"prefix": "sur",
+		"body": [
+			"${1:if} ($2) {",
+			"\t$TM_SELECTED_TEXT$3",
+			"}"
+		],
+		"description": "Selection Block Surround"
+	}
 }

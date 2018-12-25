@@ -1,17 +1,15 @@
 {
   // Place your settings in this file to overwrite the default settings
   "color-highlight.markerType": "outline",
-  "editor.cursorBlinking": "solid",
-  // "editor.cursorStyle": "underline-thin",
-  "editor.cursorStyle": "line",
-  "editor.fontSize": 24,
+  "editor.fontSize": 22,
+  "editor.lineHeight": 40,
   // "editor.fontFamily": "OperatorMono-Light",
-  // "editor.fontFamily": "OperatorMonoLig-Book",
-  "editor.fontFamily": "OperatorMonoLig-Medium",
-  "editor.tabSize": 2,
-  "editor.tabCompletion": false,
+  "editor.fontFamily": "OperatorMonoLig-Book",
+  // "editor.fontFamily": "OperatorMonoLig-Medium",
+  "editor.tabSize": 4,
+  "editor.tabCompletion": "off",
   "editor.fontLigatures": true,
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 80,
   "editor.minimap.showSlider": "always",
   "editor.occurrencesHighlight": false,
@@ -24,22 +22,17 @@
     "go": "html",
     "python": "html",
     "ejs": "html",
+    "php": "html",
+    "blade": "html",
+    "vue": "html"
   },
   "emmet.excludeLanguages": [],
   "editor.wordWrap": "bounded",
   // "files.autoSave": "onFocusChange",
-  "html.format.enable": false,
   "guides.normal.style": "dotted",
-  "prettier.eslintIntegration": true,
+  "prettier.eslintIntegration": false,
   "python.terminal.executeInFileDir": true,
   "terminal.integrated.fontSize": 21,
-  "vim.cursorStylePerMode": {
-    // "normal": "underline"
-    // "normal": "underline-thin",
-    // "visual": "underline-thin",
-    // "visualline": "underline-thin"
-    // "insert": "line"
-  },
   "vim.easymotion": true,
   "vim.easymotionMarkerFontSize": "20",
   "vim.easymotionMarkerWidthPerChar": 14,
@@ -61,7 +54,7 @@
       ]
     }
   ],
-  "vim.otherModesKeyBindingsNonRecursive": [
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
         "<leader>",
@@ -109,7 +102,7 @@
         "g",
         "k"
       ]
-    }
+    },
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
@@ -117,51 +110,25 @@
     "<C-f>": false,
     "<C-e>": false
   },
-  // "workbench.iconTheme": "vscode-icons",
   "window.zoomLevel": 0,
   "window.openFilesInNewWindow": "off",
   // "window.title": "${activeEditorShort}${separator}${folderName}",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "vscode_custom_css.imports": [
-    "https://raw.githubusercontent.com/duranivan/dotfiles/master/.vscode-style.css",
-    "file:///Users/ivan/Dropbox/dotfiles/.vscode-style.css",
-    "file:///Users/Yusuf/Dropbox/dotfiles/.vscode-style.css",
-    "file:///Users/idd/Dropbox/dotfiles/.vscode-style.css"
-  ],
-  "sync.gist": "",
-  "sync.lastUpload": "",
-  "sync.lastDownload": "",
-  "sync.anonymousGist": false,
-  "sync.host": "",
-  "sync.pathPrefix": "",
-  "sync.quietSync": false,
-  "sync.askGistName": false,
   "editor.renderIndentGuides": false,
-  "vim.disableAnnoyingNeovimMessage": true,
   // Configure editor settings to be overridden for [markdown] language.
   "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 4
+    "editor.formatOnSave": false,
   },
   "[markdown]": {
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 60,
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": true,
+    "editor.wordWrapColumn": 70,
   },
   "[latex]": {
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 60,
     "editor.quickSuggestions": true,
-    "editor.minimap.enabled": false
-  },
-  "[php]": {
-    "editor.tabSize": 4
-  },
-  "[python]": {
-    "editor.tabSize": 4
-  },
-  "[go]": {
-    "editor.tabSize": 4
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": false,
   },
   "workbench.startupEditor": "newUntitledFile",
   "macros": {
@@ -231,19 +198,14 @@
       }
     ]
   },
-  "cSpell.userWords": [
-    "Econometrics",
-    "microeconomic",
-    "parens"
-  ],
-  "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "material-icon-theme",
   "files.eol": "\n",
   "files.associations": {
     "*.fish": "fish",
-    "*.gohtml": "html"
+    "*.gohtml": "html",
+    "*.php": "php",
   },
-  "spellright.language": "english",
+  "spellright.language": ["english"],
   "workbench.fontAliasing": "antialiased",
   "go.autocompleteUnimportedPackages": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
@@ -271,10 +233,6 @@
     "*.snm",
     "*.synctex.gz"
   ],
-  "sync.forceDownload": false,
-  "bookmarks.saveBookmarksInProject": true,
-  "workbench.panel.location": "bottom",
-  "sublimeTextKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.formatOnPaste": true,
@@ -284,50 +242,95 @@
     "nightlyToolchain": "nightly-x86_64-apple-darwin"
   },
   "workbench.activityBar.visible": true,
-  "vim.disableExtension": false,
-  "rewrap.doubleSentenceSpacing": true,
   "projects.configPath": "",
   "material-icon-theme.showWelcomeMessage": false,
-  "materialTheme.cache.workbench.settings": {
-    "themeColours": "Palenight High Contrast"
-  },
   "material-icon-theme.folders.theme": "specific",
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": true
-  },
   "python.autoComplete.addBrackets": true,
   "prettier.tabWidth": 4,
-  "markJump.maximumLimit": 2056,
   "workbench.editor.tabSizing": "shrink",
-  "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
-  "editor.cursorWidth": 3,
-  "sync.autoDownload": false,
-  "sync.autoUpload": false,
-  "zenMode.fullScreen": false,
-  "markJump.additionalNotePatterns": [
-    "#\\s*(?<heading>\\>+)?\\s*[Nn][Oo][Tt][Ee]\\s*(\\((?<writer>[^\\)]+)\\))?\\s*:\\s*(?<description>.+)$"
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django",
+    "--disable=C0111,E1101",
+    // "--errors-only",
   ],
+  "editor.cursorWidth": 3,
+  "zenMode.fullScreen": false,
   "workbench.sideBar.location": "left",
   "material-icon-theme.showUpdateMessage": false,
   "php.suggest.basic": false,
-  "liveServer.settings.donotShowInfoMsg": true,
   "search.location": "panel",
-  "liveServer.settings.donotVerifyTags": true,
   "bracketPairColorizer.highlightActiveScope": true,
   "editor.matchBrackets": false,
   "bracketPairColorizer.activeScopeCSS": [
     // "backgroundColor : {color}",
     "borderStyle : none none solid none",
-    "borderWidth : 3px",
-    "borderColor : #fff; opacity: 0.7"
+    "borderWidth : 2px",
+    "borderColor : {color}; opacity: 0.9"
   ],
+  "scrolloff.alwaysCenter": true,
+  "bracketPairColorizer.showBracketsInGutter": true,
+  "bracketPairColorizer.showHorizontalScopeLine": false,
+  "bracketPairColorizer.showVerticalScopeLine": false,
+  "ruby.intellisense": "rubyLocate",
+  "ruby.codeCompletion": "rcodetools",
+  "debug.openDebug": "neverOpen",
+  "terminal.external.osxExec": "iTerm.app",
+  // "terminal.external.osxExec": "Hyper.app",
+  "prettier.singleQuote": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "files.defaultLanguage": "markdown",
+  "window.clickThroughInactive": false,
+  "zenMode.hideTabs": false,
+  "window.restoreWindows": "all",
+  "editor.cursorBlinking": "phase",
+  "vim.disableExtension": false,
+  "zenMode.restore": true,
+  "prettier.disableLanguages": [],
+  "breadcrumbs.enabled": true,
+  "python.jediEnabled": false,
+  "jupyter.appendResults": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "workbench.colorTheme": "Night Owl",
+  "workbench.settings.editor": "json",
+  "explorer.openEditors.visible": 0,
+  "javascript.suggest.completeFunctionCalls": true,
+  "css_peek.activeLanguages": [
+    "html",
+    "ejs",
+    "erb",
+    "php",
+    "vue"
+  ],
+  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {},
+    "prettyhtml": {
+      "printWidth": 80,
+      "tabWidth": 4,
+      "singleQuote": false,
+      "jsxBracketSameLine": false,
+    }
+  },
+  "commentAnchors.tags.displayInGutter": false,
+  "commentAnchors.tags.matchCase": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.mode.active": "zen",
+  "highlight-matching-tag.showPath": false,
+  "highlight-matching-tag.showRuler": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "name": {
+        "underline": "#ECC48D",
+        "highlight": "rgba(29, 59, 83, .4)"
+      }
+    }
+  },
+  "vetur.format.options.tabSize": 4,
+  "openInTerminal.app": "iTerm",
+  "evermonkey.token": "S=s60:U=6abc0d:E=16eeb2261f8:C=16793713468:P=1cd:A=en-devtoken:V=2:H=578cfc0f27ae3464a1a1aafafe01e93e",
+  "evermonkey.noteStoreUrl": "https://www.evernote.com/shard/s60/notestore",
 }

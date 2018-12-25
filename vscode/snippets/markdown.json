@@ -17,7 +17,27 @@
   "Python insert": {
     "prefix": "py",
     "body": ["```python", "${1:Code here...}", "```"],
-    "description": "Insert python code in MarkDown"
+    "description": "Insert Python code in MarkDown"
+	},
+  "Javascript insert": {
+    "prefix": "js",
+    "body": ["```js", "${1:Code here...}", "```"],
+    "description": "Insert Javascript code in MarkDown"
+	},
+  "Code block insert": {
+    "prefix": "cb",
+    "body": ["```${1:html}", "${2:Code here...}", "```"],
+    "description": "Insert a code block in MarkDown"
+	},
+  "CSS insert": {
+    "prefix": "css",
+    "body": ["```css", "${1:Code here...}", "```"],
+    "description": "Insert CSS code in MarkDown"
+	},
+  "SQL insert": {
+    "prefix": "sql",
+    "body": ["```sql", "${1:Code here...}", "```"],
+    "description": "Insert SQL code in MarkDown"
 	},
 	"R insert": {
 		"prefix": "R",
@@ -32,5 +52,25 @@
     "prefix": "bold",
     "body": ["**${1:${TM_SELECTED_TEXT}}**$0"],
     "description": "Surround with bold"
+  },
+  "Center-resize image": {
+    "prefix": "img",
+    "body": [
+			"<div style=\"text-align:center\">",
+			"\t<img src=\"${1:image}.png\" style=\"width:${2:330}px;\" />",
+			"</div>"
+		],
+    "description": "Center and resize image"
+  },
+  "Evernote meta tag": {
+    "prefix": "evn",
+    "body": [
+      "---",
+      "title: $1",
+      "tags: $2-${3:HTML_CSS}",
+      "notebook: ${2:Notes-Coding}",
+      "---"
+		],
+    "description": "Evernote meta tag to create/publish Md file to Evernote"
   }
 }

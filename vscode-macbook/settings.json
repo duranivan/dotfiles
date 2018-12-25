@@ -4,10 +4,10 @@
   "editor.cursorBlinking": "phase",
   // "editor.cursorStyle": "underline-thin",
   "editor.cursorStyle": "line",
-  "editor.fontSize": 23,
+  "editor.fontSize": 21,
   // "editor.fontFamily": "OperatorMono-Book",
-  // "editor.fontFamily": "OperatorMonoLig-Book",
-  "editor.fontFamily": "OperatorMonoLig-Medium",
+  "editor.fontFamily": "OperatorMonoLig-Book",
+  // "editor.fontFamily": "OperatorMonoLig-Medium",
   "editor.tabSize": 2,
   "editor.tabCompletion": false,
   "editor.fontLigatures": true,
@@ -27,7 +27,7 @@
     "ejs": "html",
   },
   "emmet.excludeLanguages": [],
-  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrap": "bounded",
   // "files.autoSave": "onFocusChange",
   "html.format.enable": false,
   "guides.normal.style": "dotted",
@@ -62,7 +62,7 @@
       ]
     }
   ],
-  "vim.otherModesKeyBindingsNonRecursive": [
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
         "<leader>",
@@ -123,14 +123,12 @@
   "window.openFilesInNewWindow": "off",
   // "window.title": "${activeEditorShort}${separator}${folderName}",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "vscode_custom_css.imports": [
-    "https://raw.githubusercontent.com/duranivan/dotfiles/master/.vscode-style.css",
-    "file:///Users/ivan/Dropbox/dotfiles/.vscode-style.css",
-    "file:///Users/Yusuf/Dropbox/dotfiles/.vscode-style.css",
-    "file:///Users/idd/Dropbox/dotfiles/.vscode-style.css"
-  ],
   // Configure editor settings to be overridden for [markdown] language.
   "[javascript]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+  },
+  "[typescript]": {
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
   },
@@ -141,7 +139,8 @@
   "[markdown]": {
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 60,
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": true,
+    "editor.lineNumbers": "off",
   },
   "[latex]": {
     "editor.wordWrap": "bounded",
@@ -226,12 +225,7 @@
       }
     ]
   },
-  "cSpell.userWords": [
-    "Econometrics",
-    "microeconomic",
-    "parens"
-  ],
-  "workbench.colorTheme": "Cobalt2",
+  "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
   "files.eol": "\n",
   "files.associations": {
@@ -267,9 +261,6 @@
     "*.snm",
     "*.synctex.gz"
   ],
-  "bookmarks.saveBookmarksInProject": true,
-  "workbench.panel.location": "bottom",
-  "sublimeTextKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.formatOnPaste": true,
@@ -282,51 +273,54 @@
   "rewrap.doubleSentenceSpacing": true,
   "projects.configPath": "",
   "material-icon-theme.showWelcomeMessage": false,
-  "materialTheme.cache.workbench.settings": {
-    "themeColours": "Default"
-  },
   "material-icon-theme.folders.theme": "specific",
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": true
-  },
   "python.autoComplete.addBrackets": true,
   "prettier.tabWidth": 4,
-  "markJump.maximumLimit": 2056,
   "workbench.editor.tabSizing": "shrink",
   "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django",
     "--disable=C0111",
     "--disable=C0103"
   ],
   "editor.renderIndentGuides": false,
   "vim.disableExtension": false,
   "editor.cursorWidth": 3,
-  "[ejs]": {
-    
-  },
-  "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.over": "line",
-  "cosmosDB.showSavePrompt": false,
-  "markJump.additionalNotePatterns": [
-    "#\\s*(?<heading>\\>+)?\\s*[Nn][Oo][Tt][Ee]\\s*(\\((?<writer>[^\\)]+)\\))?\\s*:\\s*(?<description>.+)$"
-  ],
   "zenMode.fullScreen": false,
-  "gitlens.keymap": "chorded",
   "material-icon-theme.showUpdateMessage": false,
-  "editor.matchBrackets": false,
   "php.suggest.basic": false,
-  "liveServer.settings.donotShowInfoMsg": true,
   "search.location": "panel",
-  "scrolloff.alwaysCenter": true,
   // "python.pythonPath": "/Users/ivan/anaconda/bin/python",
   // "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
+  "bracketPairColorizer.highlightActiveScope": true,
+  "editor.matchBrackets": false,
+  "bracketPairColorizer.activeScopeCSS": [
+    // "backgroundColor : {color}",
+    "borderStyle : none none solid none",
+    "borderWidth : 2px",
+    "borderColor : {color}; opacity: 0.9"
+  ],
+  "scrolloff.alwaysCenter": true,
+  "bracketPairColorizer.showBracketsInGutter": true,
+  "bracketPairColorizer.showHorizontalScopeLine": false,
+  "bracketPairColorizer.showVerticalScopeLine": false,
+  "ruby.intellisense": "rubyLocate",
+  "ruby.codeCompletion": "rcodetools",
+  "debug.openDebug": "neverOpen",
+  "terminal.external.osxExec": "Hyper.app",
+  "latex-workshop.message.update.show": false,
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    [
+      // "None"
+      // "#e1efff"
+    ],
+    "Red"
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "files.defaultLanguage": "markdown",
+  "window.clickThroughInactive": false,
+  "liveServer.settings.donotShowInfoMsg": true,
 }

@@ -20,6 +20,7 @@
       "\\documentclass[12pt,a4paper]{article} \\usepackage[margin=3.5cm, vmargin={3cm,3cm}]{geometry}",
       "\\usepackage{tabularx}",
       "\\usepackage{amsmath}\n",
+      "\\usepackage{graphicx}\n",
       "\\begin{document}\n",
       "\\begin{center}",
       "\t\\textbf{Quiz ${1:number} -- Eco-${2:course code}}\\\\\\\\",
@@ -39,7 +40,8 @@
     "body": [
       "\\documentclass[12pt,a4paper]{article} \\usepackage[margin=3.5cm, vmargin={3cm,3cm}]{geometry}",
       "\\usepackage{tabularx}\n",
-      "\\usepackage{amsmath}",
+      "\\usepackage{graphicx}\n",
+      "\\usepackage{amsmath}\n",
       "\\begin{document}",
       "\t$1",
       "\\end{document}"
@@ -53,7 +55,8 @@
       "%\\documentclass[12pt,trans]{beamer}",
       "%\\documentclass[12pt,handout]{beamer}",
       "%\\usepackage{pgfpages}",
-      "\\usepackage{amsmath}",
+      "\\usepackage{amsmath}\n",
+      "\\usepackage{graphicx}\n",
       "%\\pgfpagesuselayout{2 on 1}[letterpaper, border shrink=5mm]",
       "\\mode<presentation>",
       "\\usetheme{Frankfurt}",

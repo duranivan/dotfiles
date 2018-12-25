@@ -30,5 +30,19 @@
 		"prefix": "ebr",
 		"body": ["echo '<br>';"],
 		"description": "Insert echo and line break"
-	}
+	},
+	"Surround var_dump": {
+		"prefix": "vd",
+		"body": [
+			"${2:var_dump}(${1:$TM_SELECTED_TEXT})"
+		],
+		"description": "Selection Method Surround with var_dump"
+	},
+	"Surround die(var_dump)": {
+		"prefix": "dvd",
+		"body": [
+			"die(var_dump(${1:$TM_SELECTED_TEXT}))"
+		],
+		"description": "Selection Method Surround with var_dump"
+	},
 }
