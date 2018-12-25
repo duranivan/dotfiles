@@ -132,6 +132,116 @@
     {
       "name": "djangoproject-Traversy_media",
       "path": "~/Dropbox/onlinecourses/udemy/traversy_media/django_crashcourse/djangoproject"
+    },
+    {
+      "name": "dotfiles",
+      "path": "~/Dropbox/dotfiles"
+    },
+    {
+      "name": "react_catch-of-the-day_wes_boss",
+      "path": "~/Dropbox/onlinecourses/wesbos/React-For-Beginners-Starter-Files/catch-of-the-day"
+    },
+    {
+      "name": "reactjs_crash_course-traversy-media",
+      "path": "~/Dropbox/onlinecourses/udemy/traversy_media/reactjs_crash_course"
+    },
+    {
+      "name": "typescript_crashcourse-traversy-media",
+      "path": "~/Dropbox/onlinecourses/udemy/traversy_media/typescript_crashcourse"
+    },
+    {
+      "name": "myYelpCamp",
+      "path": "~/Dropbox/local_sites/myYelpCamp"
+    },
+    {
+      "name": "react-complete-guide",
+      "path": "~/Dropbox/onlinecourses/udemy/React-the-complete-guide/react-complete-guide"
+    },
+    {
+      "name": "css-the-complete-guide",
+      "path": "~/Dropbox/onlinecourses/udemy/css-the-complete-guide"
+    },
+    {
+      "name": "Notes-Coding",
+      "path": "~/Dropbox/Notes/Notes-Coding"
+    },
+    {
+      "name": "learn-vue2-laracast",
+      "path": "~/Dropbox/Dev/learn-vue2-laracast"
+    },
+    {
+      "name": "php-practitioner-laracast",
+      "path": "~/Dropbox/Dev/php-practitioner-laracast"
+    },
+    {
+      "name": "logistic-regression-code_along-lazyprogrammer",
+      "path": "~/Dropbox/onlinecourses/udemy/lazyprogrammer/Logistic-regression/logistic-regression-code_along"
+    },
+    {
+      "name": "JS_Algorithms_and_Data_Structures",
+      "path": "~/Dropbox/onlinecourses/udemy/JS_Algorithms_and_Data_Structures"
+    },
+    {
+      "name": "supervised-machine-learning",
+      "path": "~/Dropbox/onlinecourses/udemy/lazyprogrammer/supervised-machine-learning"
+    },
+    {
+      "name": "intro-ML",
+      "path": "~/Dropbox/onlinecourses/udacity/intro-ML"
+    },
+    {
+      "name": "Dissecting_Ruby_on_Rails_5",
+      "path": "~/Dropbox/onlinecourses/udemy/Dissecting_Ruby_on_Rails_5"
+    },
+    {
+      "name": "amazing-college-wordpress-dev",
+      "path": "~/Dropbox/local_sites/amazing-college"
+    },
+    {
+      "name": "fullstack_vue_express-Traversy_Media",
+      "description": "Full stack vue and express app",
+      "path": "~/Dropbox/Dev/Vue-Apps/fullstack_vue_express"
+    },
+    {
+      "name": "MyChatApp - socket.io",
+      "description": "Real time chat app with socket.io",
+      "path": "~/Dropbox/Dev/Node-apps/MyChatApp"
+    },
+    {
+      "name": "nodejs-complete-guide-Max",
+      "path": "~/Dropbox/onlinecourses/udemy/nodejs-complete-guide"
+    },
+    {
+      "name": "node-tutorial-netNinja",
+      "path": "~/Dropbox/Dev/Node-apps/node-tutorial-netNinja"
+    },
+    {
+      "name": "VueJs2-tutorial-Net-Ninja",
+      "path": "~/Dropbox/Dev/Vue-Apps/VueJs2-tutorial-Net-Ninja"
+    },
+    {
+      "name": "Vuejs-playlist",
+      "path": "~/Dropbox/Dev/Vue-Apps/vuejs-playlist"
+    },
+    {
+      "name": "vuex-playlist",
+      "path": "~/Dropbox/Dev/Vue-Apps/vuex-playlist"
+    },
+    {
+      "name": "vuetify-playlist",
+      "path": "~/Dropbox/Dev/Vue-Apps/vuetify-playlist"
+    },
+    {
+      "name": "Sass_tutorial",
+      "path": "~/Dropbox/Dev/Sass_tutorial"
+    },
+    {
+      "name": "Sandox_html_css",
+      "path": "~/Dropbox/Dev/Sandox_html_css"
+    },
+    {
+      "name": "SVG-bgs-web-design",
+      "path": "~/Dropbox/UX_UI/SVG-bgs-web-design"
     }
   ]
 }
