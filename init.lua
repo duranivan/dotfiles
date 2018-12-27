@@ -19,7 +19,60 @@ hs.alert.show("Config loaded")
 hs.hotkey.bind(hyper, "Y", hs.toggleConsole)
 
 
--- Resize window (half size of the scree)
+-- Increase horizontal size of window
+increaseHor = function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.w = f.w * 1.01
+  win:setFrame(f)
+end
+
+hs.hotkey.bind(hyper4, "]", increaseHor, nil, increaseHor)
+
+-- Decrease horizontal size of window
+increaseHor = function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.w = f.w * 0.99
+  win:setFrame(f)
+end
+
+hs.hotkey.bind(hyper4, "[", increaseHor, nil, increaseHor)
+
+-- Increase vertical size of window
+increaseHor = function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.h = f.h * 1.01
+  win:setFrame(f)
+end
+
+hs.hotkey.bind(hyper4, "n", increaseHor, nil, increaseHor)
+
+-- Decrease vertical size of window
+increaseHor = function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.h = f.h * 0.99
+  win:setFrame(f)
+end
+
+hs.hotkey.bind(hyper4, "p", increaseHor, nil, increaseHor)
+
+
+-- Resize window (half size of the screen)
 
 -- hs.hotkey.bind(hyper, "R", function()
 --   local win = hs.window.focusedWindow()
@@ -240,7 +293,7 @@ hs.hotkey.bind(hyper, "'", function()
 
   f.x = max.x + (max.w * 0.62)
   f.y = max.y
-  f.w = max.w * 0.38
+  f.w = max.w * 0.34
   f.h = max.h
   win:setFrame(f)
 end)
@@ -254,7 +307,7 @@ hs.hotkey.bind(hyper, ";", function()
 
   f.x = max.x
   f.y = max.y
-  f.w = max.w * 0.62
+  f.w = max.w * 0.66
   f.h = max.h
   win:setFrame(f)
 end)
