@@ -1,75 +1,30 @@
--- Load extra files
+-- Functions
 
--- require("other_configs.cherry")
+resizeMediumCenter = function(app)
+  local win = app:focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
 
--- Set up
-local hyper  = {"ctrl", "cmd", "alt"}
-local hyper2 = {"shift", "ctrl", "cmd", "alt"}
-local hyper3 = {"shift", "ctrl", "cmd"}
-local hyper4 = {"shift", "cmd", "alt"}
+  f.x = max.x + (max.w * 0.2)
+  f.y = max.y + (max.h * 0.15)
+  f.w = max.w * 0.6
+  f.h = max.h * 0.7
+  win:setFrame(f)
+end
 
--- Reload config
-hs.hotkey.bind({"alt", "ctrl"}, "1", function()
-  hs.reload()
-end)
-hs.alert.show("Config loaded")
-
-
--- Toggle console
-hs.hotkey.bind(hyper, "Y", hs.toggleConsole)
-
-
--- Increase horizontal size of window
-increaseHor = function()
+centerWindow = function(app)
+  local win = app:focusedWindow()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.w = f.w * 1.01
+  f.x = max.x + (max.w - f.w)/2
+  f.y = max.y + (max.h - f.h)/2
   win:setFrame(f)
 end
 
-hs.hotkey.bind(hyper4, "]", increaseHor, nil, increaseHor)
-
--- Decrease horizontal size of window
-increaseHor = function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.w = f.w * 0.99
-  win:setFrame(f)
-end
-
-hs.hotkey.bind(hyper4, "[", increaseHor, nil, increaseHor)
-
--- Increase vertical size of window
-increaseHor = function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.h = f.h * 1.01
-  win:setFrame(f)
-end
-
-hs.hotkey.bind(hyper4, "n", increaseHor, nil, increaseHor)
-
--- Decrease vertical size of window
-increaseHor = function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.h = f.h * 0.99
-  win:setFrame(f)
-end
-
-hs.hotkey.bind(hyper4, "p", increaseHor, nil, increaseHor)
 
 
 -- Resize window (half size of the screen)
