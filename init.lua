@@ -26,19 +26,18 @@ centerWindow = function(app)
 end
 
 
+-- Set up
+local hyper  = {"ctrl", "cmd", "alt"}
+local hyper2 = {"shift", "ctrl", "cmd", "alt"}
+local hyper3 = {"shift", "ctrl", "cmd"}
+local hyper4 = {"shift", "cmd", "alt"}
 
--- Resize window (half size of the screen)
+-- Reload config
+hs.hotkey.bind({"alt", "ctrl"}, "1", function()
+  hs.reload()
+end)
+hs.alert.show("Config loaded")
 
--- hs.hotkey.bind(hyper, "R", function()
---   local win = hs.window.focusedWindow()
---   local f = win:frame()
---   local screen = win:screen()
---   local max = screen:frame()
-
---   f.w = max.w / 2
---   f.h = max.h
---   win:setFrame(f)
--- end)
 
 --------------------------------------------------
 -- Move Window (nudging - not resizing)
@@ -50,15 +49,6 @@ end
 
 delay = hs.eventtap.keyRepeatDelay()
 
-hs.hotkey.bind(hyper2, "Y", nil, nil, function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x - 15
-  f.y = f.y - 15
-  win:setFrame(f)
-end)
-
 moveUp = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
@@ -67,15 +57,6 @@ moveUp = function()
   win:setFrame(f)
 end
 hs.hotkey.bind(hyper2, "K", moveUp, nil, moveUp)
-
-hs.hotkey.bind(hyper2, "U", nil, nil, function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x + 15
-  f.y = f.y - 15
-  win:setFrame(f)
-end)
 
 moveLeft = function()
   local win = hs.window.focusedWindow()
@@ -95,15 +76,6 @@ moveRight = function()
 end
 hs.hotkey.bind(hyper2, "L", moveRight, nil, moveRight)
 
-hs.hotkey.bind(hyper2, "B", nil, nil, function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x - 15
-  f.y = f.y + 15
-  win:setFrame(f)
-end)
-
 moveDown = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
@@ -113,21 +85,13 @@ moveDown = function()
 end
 hs.hotkey.bind(hyper2, "J", moveDown, nil, moveDown)
 
-hs.hotkey.bind(hyper2, "N", nil, nil, function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x + 15
-  f.y = f.y + 15
-  win:setFrame(f)
-end)
 
 --------------------------------------------------
 -- Window Location and Resizing
 --------------------------------------------------
 
 -- Move window top-middle of the screen and resize
-hs.hotkey.bind(hyper3, "P", function()
+hs.hotkey.bind(hyper3, "I", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -154,31 +118,59 @@ hs.hotkey.bind(hyper3, "/", function()
   win:setFrame(f)
 end)
 
--- Move window center of screen and resize
+-- Move window center of screen and resize small
+hs.hotkey.bind(hyper3, "S", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x + (max.w * 0.32)
+  f.y = max.y + (max.h * 0.3)
+  f.w = max.w * 0.36
+  f.h = max.h * 0.4
+  win:setFrame(f)
+end)
+
+-- Move window center of screen and resize for Email writing
+hs.hotkey.bind(hyper3, "E", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x + (max.w * 0.34)
+  f.y = max.y + (max.h * 0.15)
+  f.w = max.w * 0.32
+  f.h = max.h * 0.7
+  win:setFrame(f)
+end)
+
+-- Move window center of screen and resize medium
 hs.hotkey.bind(hyper3, "K", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w * 0.15)
-  f.y = max.y + (max.h * 0.1)
-  f.w = max.w * 0.7
-  f.h = max.h * 0.8
+  f.x = max.x + (max.w * 0.2)
+  f.y = max.y + (max.h * 0.15)
+  f.w = max.w * 0.6
+  f.h = max.h * 0.7
   win:setFrame(f)
 end)
 
 -- Move window center of screen and resize BIG
-hs.hotkey.bind(hyper3, "B", function()
+hs.hotkey.bind(hyper3, "J", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w * 0.13)
-  f.y = max.y + (max.h * 0.07)
-  f.w = max.w * 0.75
-  f.h = max.h * 0.88
+  f.x = max.x + (max.w * 0.1)
+  f.y = max.y + (max.h * 0.05)
+  f.w = max.w * 0.8
+  f.h = max.h * 0.9
   win:setFrame(f)
 end)
 
@@ -246,7 +238,7 @@ hs.hotkey.bind(hyper, "'", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w * 0.62)
+  f.x = max.x + (max.w * 0.66)
   f.y = max.y
   f.w = max.w * 0.34
   f.h = max.h
@@ -267,32 +259,6 @@ hs.hotkey.bind(hyper, ";", function()
   win:setFrame(f)
 end)
 
--- -- Move window right bottom - cycle
--- function right_bottom()
---   local win = hs.window.focusedWindow()
---   local f = win:frame()
---   local screen = win:screen()
---   local max = screen:frame()
-
---   f.x = max.x + (max.w / 2)
---   f.y = max.y + (max.h * 0.5)
---   f.w = max.w / 2
---   f.h = max.h * 0.5
---   win:setFrame(f)
--- end
-
--- function right_bottom2()
---   local win = hs.window.focusedWindow()
---   local f = win:frame()
---   local screen = win:screen()
---   local max = screen:frame()
-
---   f.x = max.x + (max.w / 2)
---   f.y = max.y + (max.h * 0.7)
---   f.w = max.w / 2
---   f.h = max.h * 0.3
---   win:setFrame(f)
--- end
 
 -- Move window right top
 hs.hotkey.bind(hyper3, "O", function()
@@ -308,19 +274,6 @@ hs.hotkey.bind(hyper3, "O", function()
   win:setFrame(f)
 end)
 
--- Move window right top -- larger
--- hs.hotkey.bind(hyper, "O", function()
---   local win = hs.window.focusedWindow()
---   local f = win:frame()
---   local screen = win:screen()
---   local max = screen:frame()
-
---   f.x = max.x + (max.w / 2)
---   f.y = max.y
---   f.w = max.w / 2
---   f.h = max.h * 0.7
---   win:setFrame(f)
--- end)
 
 -- Move window left bottom
 hs.hotkey.bind(hyper3, "M", function()
@@ -357,7 +310,7 @@ hs.hotkey.bind(hyper3, "C", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w / 6)
+  f.x = max.x + (max.w / 4)
   f.y = max.y
   f.w = max.w / 2
   f.h = max.h
@@ -376,27 +329,27 @@ hs.hotkey.bind(hyper4, "C", function()
   win:setFrame(f)
 end)
 
--- Move Window far right (does not resize) center vertically
-hs.hotkey.bind(hyper4, "R", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x + (max.w - f.w)
-  f.y = max.y + (max.h - f.h)/2
-  win:setFrame(f)
-end)
-
--- Move Window far left (does not resize) center vertically
+-- Move Window far right bottom (does not resize)
 hs.hotkey.bind(hyper4, "L", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
+  f.x = max.x + (max.w - f.w)
+  f.y = max.y + (max.h - f.h)
+  win:setFrame(f)
+end)
+
+-- Move Window far left bottom (does not resize)
+hs.hotkey.bind(hyper4, "H", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
   f.x = max.x
-  f.y = max.y + (max.h - f.h)/2
+  f.y = max.y + (max.h - f.h)
   win:setFrame(f)
 end)
 
@@ -414,111 +367,48 @@ hs.hotkey.bind(hyper3, "F", function()
   win:setFrame(f)
 end)
 
--- Trying some cycling or sequencing function
--- local cycle_leftop = hs.fnutils.sequence({
---   {function()
---     local win = hs.window.focusedWindow()
---     local f = win:frame()
---     local screen = win:screen()
---     local max = screen:frame()
+-- Full screen (1920x1080)
+hs.hotkey.bind(hyper, "F", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
 
---     f.x = max.x
---     f.y = max.y
---     f.w = max.w / 2
---     f.h = max.h * 0.5
---     win:setFrame(f)
---   end},
-
---   {function()
---     local win = hs.window.focusedWindow()
---     local f = win:frame()
---     local screen = win:screen()
---     local max = screen:frame()
-
---     f.x = max.x
---     f.y = max.y
---     f.w = max.w / 2
---     f.h = max.h * 0.3
---     win:setFrame(f)
---   end}
--- })
-
--- hs.hotkey.bind(hyper, "Q", function()
---   cycle_leftop()
--- end)
-
------------------------------------------------
--- Hyper hjkl to switch window focus
------------------------------------------------
-hs.hotkey.bind(hyper, ']', function()
-    hs.window.switcher.nextWindow()
+  f.x = max.x + (max.w - 1920)/2
+  f.y = max.y - 68 + (max.h - 1080)/2
+  f.w = 1920
+  f.h = 1080 + 68 + 23
+  win:setFrame(f)
 end)
 
-hs.hotkey.bind("alt", "tab", function()
-    hs.window.switcher.nextWindow()
-end)
-
-hs.hotkey.bind(hyper, '[', function()
-    hs.window.switcher.previousWindow()
-end)
-
--- hs.hotkey.bind(hyper, 'k', function()
---     hs.window.focusedWindow():focusWindowNorth()
--- end)
-
--- hs.hotkey.bind(hyper, 'j', function()
---     hs.window.focusedWindow():focusWindowSouth()
--- end)
-
--- hs.hotkey.bind(hyper, 'l', function()
---     hs.window.focusedWindow():focusWindowEast()
--- end)
-
--- hs.hotkey.bind(hyper, 'h', function()
---     hs.window.focusedWindow():focusWindowWest()
--- end)
 
 -------------------------------------------------
 -- Focus particular apps
 -------------------------------------------------
 
-hs.hotkey.bind("alt", "0", function()
-  hs.application.launchOrFocus("PhpStorm")
-end)
-
-hs.hotkey.bind("alt", "S", function()
-  hs.application.launchOrFocus("Sublime Text")
-end)
-
 hs.hotkey.bind("alt", "1", function()
-  hs.application.launchOrFocus("Safari")
-end)
-
-hs.hotkey.bind("alt", "3", function()
-  -- hs.application.launchOrFocus("Visual Studio Code - Insiders")
-  hs.application.launchOrFocus("Visual Studio Code")
+  hs.application.launchOrFocus("Google Chrome")
 end)
 
 hs.hotkey.bind("alt", "2", function()
-  hs.application.launchOrFocus("Google Chrome")
-  -- hs.application.launchOrFocus("FirefoxNightly")
-  -- hs.application.launchOrFocus("Firefox Developer Edition")
-  -- hs.application.launchOrFocus("Quiver")
-  -- hs.application.launchOrFocus("UlyssesMac")
+  centerWindow(hs.application.open("kitty", 2, true))
+end)
+
+hs.hotkey.bind("alt", "3", function()
+  hs.application.launchOrFocus("Visual Studio Code")
 end)
 
 hs.hotkey.bind("alt", "4", function()
-  -- hs.application.launchOrFocus("WorkFlowy")
   hs.application.launchOrFocus("Sketch")
 end)
 
 -------------------------------------------------
 -- Show window hints
 -------------------------------------------------
--- hs.hints.showTitleThresh = 0
--- hs.hotkey.bind("ctrl", ";", function()
---     hs.hints.windowHints()
--- end)
+hs.hints.showTitleThresh = 0
+hs.hotkey.bind("ctrl", ";", function()
+    hs.hints.windowHints()
+end)
 
 -------------------------------------------------
 -- Move window to next display (East or West)
@@ -548,19 +438,8 @@ local samsungScreen = "S27D590"
 local iMacScreen = "iMac"
 
 applyCodingLayout = function()
-  -- local win = hs.window.focusedWindow()
-  -- local f = win:frame()
-  -- local screen = win:screen()
-  -- local max = screen:frame()
-
   hs.application.launchOrFocus("Visual Studio Code")
   hs.application.launchOrFocus("Google Chrome")
-
-  -- local codingLayout = {
-  --   {"Google Chrome", nil, samsungScreen, nil, nil, hs.geometry.rect(max.x + (max.w * 0.13), max.y + (max.h * 0.07), max.w * 0.75, max.h * 0.88)},
-  --   {"Visual Studio Code", nil, iMacScreen, nil, nil, hs.geometry.rect(max.x + (max.w * 0.13), max.y + (max.h * 0.07), max.w * 0.75, max.h * 0.88)}
-  -- }
-  -- hs.layout.apply(codingLayout)
 end
 
 hs.hotkey.bind(hyper, "1", applyCodingLayout)
