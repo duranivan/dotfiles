@@ -1,5 +1,5 @@
-:nnoremap j gjzz
-:nnoremap k gkzz
+nnoremap j gj
+nnoremap k gk
 
 " " Implement typewriter mode
 " inoremap <CR> <CR><esc>zza
@@ -8,12 +8,25 @@
 " nnoremap j gjzz
 " nnoremap k gkzz
 
-" set scrolloff=999
-
-
 let mapleader=<space>
 nnoremap <leader>r :GotoSymbolInProject<CR>
 nnoremap <leader>d :ToggleSideBar<CR>
-nnoremap <leader>l :AceJumpWithinLine<CR>
-nnoremap <leader>. :AceJumpLine<CR>
-nnoremap <leader>w :AceJumpWord<CR>
+" nnoremap <leader>l :AceJumpWithinLine<CR>
+" nnoremap <leader>. :AceJumpLine<CR>
+" nnoremap <leader>w :AceJumpWord<CR>
+" nnoremap <leader>g :TypescriptGoToDefinition<CR>
+nnoremap <leader>g :LspSymbolDefinition<CR>
+nnoremap <leader>r :LspSymbolReferences<CR>
+nnoremap gh :LspHover<CR>
+nnoremap <leader>q :TypescriptQuickInfoDoc<CR>
+nnoremap <leader>i bi
+nnoremap <leader>a ea
+
+" " Emmet's increment/decrement numbers
+" nnoremap <C-up> :RunEmmetAction action=increment_number_by_1<CR><Esc>
+" nnoremap <C-down> :RunEmmetAction action=decrement_number_by_1<CR><Esc>
+
+" Spelling (implemented now by default in neovintageous)
+" nnoremap z= :ContextMenu<CR>
+" nnoremap ]s :NextMisspelling<CR>
+" nnoremap [s :PrevMisspelling<CR>
