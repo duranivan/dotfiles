@@ -32,9 +32,11 @@ _region_*
 auto/
 # Other files
 .DS_Store
+node_modules/
 *.code-workspace
 .rubocop.yml
 *.sublime-project
 *.sublime-workspace
 .vscode
 debug
+.idea/
