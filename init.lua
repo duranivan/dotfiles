@@ -395,11 +395,11 @@ hs.hotkey.bind("alt", "2", function()
 end)
 
 hs.hotkey.bind("alt", "3", function()
-  hs.application.launchOrFocus("Visual Studio Code")
+  hs.application.launchOrFocus("Emacs")
 end)
 
 hs.hotkey.bind("alt", "4", function()
-  hs.application.launchOrFocus("Sketch")
+  hs.application.launchOrFocus("Visual Studio Code")
 end)
 
 -------------------------------------------------
