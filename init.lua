@@ -387,7 +387,8 @@ end)
 -------------------------------------------------
 
 hs.hotkey.bind("alt", "1", function()
-  hs.application.launchOrFocus("Google Chrome")
+  -- hs.application.launchOrFocus("Google Chrome")
+  hs.application.launchOrFocus("Safari")
 end)
 
 hs.hotkey.bind("alt", "2", function()
