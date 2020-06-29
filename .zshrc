@@ -202,3 +202,5 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 # Deno bin Path
 export PATH="/Users/ivan/.deno/bin:$PATH"
 
+# Gruvobox theme
+source "$HOME/.config/nvim/autoload/plugged/gruvbox/gruvbox_256palette_osx.sh"
