@@ -11,9 +11,14 @@
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:vue/recommended"
   ],
-  "parser": "babel-eslint",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
   "rules": {
     "semi": ["error", "always"],
     "no-unused-vars": [
