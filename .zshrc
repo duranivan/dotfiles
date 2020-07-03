@@ -92,6 +92,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Make neovim the default editor
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 # some more aliases
 alias ll='ls -alF'
 alias la='ls -A'
