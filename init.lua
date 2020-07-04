@@ -53,7 +53,7 @@ moveUp = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
-  f.y = f.y - 15
+  f.y = f.y - 25
   win:setFrame(f)
 end
 hs.hotkey.bind(hyper2, "K", moveUp, nil, moveUp)
@@ -62,7 +62,7 @@ moveLeft = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
-  f.x = f.x - 20
+  f.x = f.x - 50
   win:setFrame(f)
 end
 hs.hotkey.bind(hyper2, "H", moveLeft, nil, moveLeft)
@@ -71,7 +71,7 @@ moveRight = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
-  f.x = f.x + 20
+  f.x = f.x + 50
   win:setFrame(f)
 end
 hs.hotkey.bind(hyper2, "L", moveRight, nil, moveRight)
@@ -80,7 +80,7 @@ moveDown = function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
-  f.y = f.y + 15
+  f.y = f.y + 25
   win:setFrame(f)
 end
 hs.hotkey.bind(hyper2, "J", moveDown, nil, moveDown)
