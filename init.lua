@@ -386,6 +386,10 @@ end)
 -- Focus particular apps
 -------------------------------------------------
 
+hs.hotkey.bind("alt", "0", function()
+  centerWindow(hs.application.open("kitty", 2, true))
+end)
+
 hs.hotkey.bind("alt", "1", function()
   hs.application.launchOrFocus("Google Chrome")
 end)
