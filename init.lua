@@ -303,14 +303,14 @@ hs.hotkey.bind(hyper3, "U", function()
   win:setFrame(f)
 end)
 
--- Center Window (window resizes to half the horizontal size of the screen)
+-- Center Window (window resizes to 54% the horizontal size of the screen)
 hs.hotkey.bind(hyper3, "C", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w / 4)
+  f.x = max.x + (max.w * 0.23)
   f.y = max.y
   f.w = max.w / 2
   f.h = max.h
