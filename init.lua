@@ -395,8 +395,8 @@ hs.hotkey.bind("alt", "1", function()
 end)
 
 hs.hotkey.bind("alt", "2", function()
-  -- centerWindow(hs.application.open("kitty", 2, true))
-  hs.application.launchOrFocus("iTerm")
+  -- hs.application.launchOrFocus("iTerm")
+  hs.application.launchOrFocus("Safari")
 end)
 
 hs.hotkey.bind("alt", "3", function()
