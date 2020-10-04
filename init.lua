@@ -124,11 +124,12 @@ hs.hotkey.bind(hyper3, "S", function()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  local proportion = 0.62
 
-  f.x = max.x + (max.w * 0.32)
-  f.y = max.y + (max.h * 0.3)
-  f.w = max.w * 0.36
-  f.h = max.h * 0.4
+  f.x = max.x + (max.w * (1 - proportion)/2)
+  f.w = max.w * proportion
+  f.h = f.w * 9/16
+  f.y = max.y + (max.h - f.h)/2
   win:setFrame(f)
 end)
 
@@ -138,11 +139,12 @@ hs.hotkey.bind(hyper3, "E", function()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  local proportion = 0.4
 
-  f.x = max.x + (max.w * 0.34)
-  f.y = max.y + (max.h * 0.15)
-  f.w = max.w * 0.32
-  f.h = max.h * 0.7
+  f.x = max.x + (max.w * (1 - proportion)/2)
+  f.w = max.w * proportion
+  f.h = max.h * 0.85
+  f.y = max.y + (max.h - f.h)/2
   win:setFrame(f)
 end)
 
@@ -152,11 +154,12 @@ hs.hotkey.bind(hyper3, "K", function()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  local proportion = 0.7
 
-  f.x = max.x + (max.w * 0.2)
-  f.y = max.y + (max.h * 0.15)
-  f.w = max.w * 0.6
-  f.h = max.h * 0.7
+  f.x = max.x + (max.w * (1-proportion)/2)
+  f.w = max.w * proportion
+  f.h = f.w * 9/16
+  f.y = max.y + (max.h - f.h)/2
   win:setFrame(f)
 end)
 
@@ -166,11 +169,12 @@ hs.hotkey.bind(hyper3, "J", function()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  local proportion = 0.78
 
-  f.x = max.x + (max.w * 0.1)
-  f.y = max.y + (max.h * 0.05)
-  f.w = max.w * 0.8
-  f.h = max.h * 0.9
+  f.x = max.x + (max.w * (1-proportion)/2)
+  f.w = max.w * proportion
+  f.h = f.w * 9/16
+  f.y = max.y + (max.h - f.h)/2
   win:setFrame(f)
 end)
 
@@ -281,11 +285,12 @@ hs.hotkey.bind(hyper3, "M", function()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  local proportion = 0.4
 
-  f.x = max.x
-  f.y = max.y + (max.h * 0.5)
-  f.w = max.w / 2
-  f.h = max.h * 0.5
+  f.x = max.x + (max.w * (1 - proportion)/2)
+  f.w = max.w * proportion
+  f.h = f.w * 9/16
+  f.y = max.y + (max.h - f.h)/2
   win:setFrame(f)
 end)
 
@@ -312,7 +317,7 @@ hs.hotkey.bind(hyper3, "C", function()
 
   f.x = max.x + (max.w * 0.23)
   f.y = max.y
-  f.w = max.w / 2
+  f.w = max.w * 0.54
   f.h = max.h
   win:setFrame(f)
 end)
@@ -400,15 +405,15 @@ end)
 
 hs.hotkey.bind("alt", "2", function()
   -- hs.application.launchOrFocus("iTerm")
-  hs.application.launchOrFocus("Safari")
+  hs.application.open("Brave Browser")
 end)
 
 hs.hotkey.bind("alt", "3", function()
-  hs.application.launchOrFocus("Emacs")
+  hs.application.launchOrFocus("Visual Studio Code")
 end)
 
 hs.hotkey.bind("alt", "4", function()
-  hs.application.launchOrFocus("Visual Studio Code")
+  hs.application.launchOrFocus("iTerm")
 end)
 
 -------------------------------------------------
