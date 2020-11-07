@@ -395,10 +395,6 @@ hs.hotkey.bind("alt", "0", function()
   centerWindow(hs.application.open("kitty", 2, true))
 end)
 
-hs.hotkey.bind("alt", "9", function()
-  hs.application.open("Sublime Text")
-end)
-
 hs.hotkey.bind("alt", "1", function()
   hs.application.launchOrFocus("Google Chrome")
 end)
@@ -410,6 +406,10 @@ end)
 
 hs.hotkey.bind("alt", "3", function()
   hs.application.launchOrFocus("Visual Studio Code")
+end)
+
+hs.hotkey.bind("alt", "9", function()
+  hs.application.launchOrFocus("Sublime Text")
 end)
 
 hs.hotkey.bind("alt", "4", function()
