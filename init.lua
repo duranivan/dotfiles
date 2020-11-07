@@ -396,7 +396,7 @@ hs.hotkey.bind("alt", "0", function()
 end)
 
 hs.hotkey.bind("alt", "9", function()
-  hs.application.open("Brave Browser")
+  hs.application.open("Sublime Text")
 end)
 
 hs.hotkey.bind("alt", "1", function()
