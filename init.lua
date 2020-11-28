@@ -133,6 +133,21 @@ hs.hotkey.bind(hyper3, "S", function()
   win:setFrame(f)
 end)
 
+-- Move window center of screen and resize small
+hs.hotkey.bind(hyper3, "A", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+  local proportion = 0.45
+
+  f.x = max.x + (max.w * (1 - proportion)/2)
+  f.w = max.w * proportion
+  f.h = f.w * 9/16
+  f.y = max.y + (max.h - f.h)/2
+  win:setFrame(f)
+end)
+
 -- Move window center of screen and resize for Email writing
 hs.hotkey.bind(hyper3, "E", function()
   local win = hs.window.focusedWindow()
