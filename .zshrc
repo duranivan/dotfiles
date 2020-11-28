@@ -145,6 +145,9 @@ function mkf () {
     mkcd "${DIR}" && touch "${FILE}" 
 }
 
+# home folder bin path
+export PATH="$HOME/bin:$PATH"
+
 # Base16 Shell
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-default-dark.sh"
@@ -208,3 +211,6 @@ export PATH="/Users/ivan/.deno/bin:$PATH"
 
 # Gruvobox theme
 source "$HOME/.config/nvim/autoload/plugged/gruvbox/gruvbox_256palette_osx.sh"
+
+# JAVA_HOME
+export JAVA_HOME=`/usr/libexec/java_home`
