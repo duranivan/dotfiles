@@ -423,7 +423,7 @@ hs.hotkey.bind("alt", "3", function()
   hs.application.launchOrFocus("Visual Studio Code")
 end)
 
-hs.hotkey.bind("alt", "9", function()
+hs.hotkey.bind({"ctrl", "cmd"}, "s", function()
   hs.application.launchOrFocus("Sublime Text")
 end)
 
