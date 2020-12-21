@@ -406,7 +406,7 @@ end)
 -- Focus particular apps
 -------------------------------------------------
 
-hs.hotkey.bind("alt", "0", function()
+hs.hotkey.bind({"ctrl", "cmd"}, "k", function()
   centerWindow(hs.application.open("kitty", 2, true))
 end)
 
@@ -425,6 +425,10 @@ end)
 
 hs.hotkey.bind({"ctrl", "cmd"}, "s", function()
   hs.application.launchOrFocus("Sublime Text")
+end)
+
+hs.hotkey.bind({"ctrl", "cmd"}, "f", function()
+  hs.application.launchOrFocus("Firefox")
 end)
 
 hs.hotkey.bind("alt", "4", function()
