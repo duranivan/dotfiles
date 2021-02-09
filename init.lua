@@ -154,11 +154,11 @@ hs.hotkey.bind(hyper3, "E", function()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
-  local proportion = 0.4
+  local proportion = 0.36
 
   f.x = max.x + (max.w * (1 - proportion)/2)
   f.w = max.w * proportion
-  f.h = max.h * 0.85
+  f.h = max.h * 0.80
   f.y = max.y + (max.h - f.h)/2
   win:setFrame(f)
 end)
@@ -414,10 +414,11 @@ hs.hotkey.bind("alt", "1", function()
   hs.application.launchOrFocus("Google Chrome")
 end)
 
-hs.hotkey.bind("alt", "2", function()
-  -- hs.application.launchOrFocus("iTerm")
-  hs.application.open("Brave Browser")
-end)
+-- hs.hotkey.bind("alt", "2", function()
+--   -- hs.application.launchOrFocus("iTerm")
+--   hs.application.open("Brave Browser")
+--   -- hs.application.open("Marta")
+-- end)
 
 hs.hotkey.bind("alt", "3", function()
   hs.application.launchOrFocus("Visual Studio Code")
@@ -431,7 +432,7 @@ hs.hotkey.bind({"ctrl", "cmd"}, "f", function()
   hs.application.launchOrFocus("Firefox")
 end)
 
-hs.hotkey.bind("alt", "4", function()
+hs.hotkey.bind("alt", "0", function()
   hs.application.launchOrFocus("iTerm")
 end)
 
