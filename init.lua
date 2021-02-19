@@ -1,3 +1,8 @@
+-- local variables
+
+local screenMargin = 30
+local wingap = 15
+
 -- Functions
 
 resizeMediumCenter = function(app)
@@ -201,10 +206,10 @@ hs.hotkey.bind(hyper3, "L", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w / 2)
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
+  f.x = max.x + screenMargin + wingap + (max.w - screenMargin*2 - wingap) / 2
+  f.y = max.y + screenMargin
+  f.w = (max.w - screenMargin*2 - wingap) / 2
+  f.h = max.h - screenMargin*2
   win:setFrame(f)
 end)
 
@@ -215,10 +220,10 @@ hs.hotkey.bind(hyper3, "H", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
+  f.x = max.x + screenMargin
+  f.y = max.y + screenMargin
+  f.w = (max.w - screenMargin*2 - wingap) / 2
+  f.h = max.h - screenMargin*2
   win:setFrame(f)
 end)
 
@@ -229,24 +234,10 @@ hs.hotkey.bind(hyper3, ".", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w / 2)
-  f.y = max.y + (max.h * 0.5)
-  f.w = max.w / 2
-  f.h = max.h * 0.5
-  win:setFrame(f)
-end)
-
--- Move window right bottom - smaller
-hs.hotkey.bind(hyper, ".", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x + (max.w / 2)
-  f.y = max.y + (max.h * 0.7)
-  f.w = max.w / 2
-  f.h = max.h * 0.3
+  f.x = max.x + screenMargin + wingap + (max.w - screenMargin*2 - wingap) / 2
+  f.y = max.y + screenMargin + wingap + (max.h - screenMargin*2 - wingap) / 2
+  f.w = (max.w - screenMargin*2 - wingap) / 2
+  f.h = (max.h - screenMargin*2 - wingap) / 2
   win:setFrame(f)
 end)
 
@@ -286,10 +277,10 @@ hs.hotkey.bind(hyper3, "O", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w / 2)
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h * 0.5
+  f.x = max.x + screenMargin + wingap + (max.w - screenMargin*2 - wingap) / 2
+  f.y = max.y + screenMargin
+  f.w = (max.w - screenMargin*2 - wingap) / 2
+  f.h = (max.h - screenMargin*2 - wingap) / 2
   win:setFrame(f)
 end)
 
@@ -302,10 +293,10 @@ hs.hotkey.bind(hyper3, "M", function()
   local max = screen:frame()
   local proportion = 0.4
 
-  f.x = max.x + (max.w * (1 - proportion)/2)
-  f.w = max.w * proportion
-  f.h = f.w * 9/16
-  f.y = max.y + (max.h - f.h)/2
+  f.x = max.x + screenMargin
+  f.y = max.y + screenMargin + wingap + (max.h - screenMargin*2 - wingap) / 2
+  f.w = (max.w - screenMargin*2 - wingap) / 2
+  f.h = (max.h - screenMargin*2 - wingap) / 2
   win:setFrame(f)
 end)
 
@@ -316,24 +307,24 @@ hs.hotkey.bind(hyper3, "U", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h * 0.5
+  f.x = max.x + screenMargin
+  f.y = max.y + screenMargin
+  f.w = (max.w - screenMargin*2 - wingap) / 2
+  f.h = (max.h - screenMargin*2 - wingap) / 2
   win:setFrame(f)
 end)
 
--- Center Window (window resizes to 54% the horizontal size of the screen)
+-- Center Window (window resizes to 50% the horizontal size of the screen)
 hs.hotkey.bind(hyper3, "C", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w * 0.23)
-  f.y = max.y
-  f.w = max.w * 0.54
-  f.h = max.h
+  f.x = max.x + screenMargin + wingap + (max.w - screenMargin*2 - wingap) / 4
+  f.y = max.y + screenMargin
+  f.w = (max.w - screenMargin*2 - wingap) / 2
+  f.h = max.h - screenMargin*2
   win:setFrame(f)
 end)
 
@@ -380,10 +371,10 @@ hs.hotkey.bind(hyper3, "F", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w
-  f.h = max.h
+  f.x = max.x + screenMargin
+  f.y = max.y + screenMargin
+  f.w = max.w - screenMargin*2
+  f.h = max.h - screenMargin*2
   win:setFrame(f)
 end)
 
@@ -433,7 +424,8 @@ hs.hotkey.bind({"ctrl", "cmd"}, "f", function()
 end)
 
 hs.hotkey.bind("alt", "0", function()
-  hs.application.launchOrFocus("iTerm")
+  -- hs.application.launchOrFocus("iTerm")
+  hs.application.launchOrFocus("kitty")
 end)
 
 -------------------------------------------------
@@ -476,4 +468,38 @@ applyCodingLayout = function()
   hs.application.launchOrFocus("Google Chrome")
 end
 
-hs.hotkey.bind(hyper, "1", applyCodingLayout)
+local redBorder = false
+hs.window.highlight.ui.frameColor = {1,0,0,0.7}
+hs.window.highlight.ui.frameWidth = 6
+hs.window.highlight.ui.isolateColor = {0,0,0,1}
+-- hs.window.highlight.start()
+
+redBorderWindow = function()
+  if not redBorder then
+    hs.window.highlight.ui.overlay=true
+    hs.window.highlight.ui.frameColor = {1,0,0,0.7}
+    hs.window.highlight.ui.overlayColor = {0,0,0,0.00000001}
+    redBorder = true
+  else
+    hs.window.highlight.ui.overlay=false
+    hs.window.highlight.ui.frameColor = {1,0,0,0}
+    hs.window.highlight.ui.overlayColor = {0,0,0,0.4}
+    redBorder = false
+  end
+end
+
+isolateWindowMedium = function ()
+  hs.window.highlight.ui.isolateColor = {0,0,0,0.5}
+  hs.window.highlight.toggleIsolate()
+end
+
+isolateWindowFull = function ()
+  hs.window.highlight.ui.isolateColor = {0,0,0,0.95}
+  hs.window.highlight.toggleIsolate()
+end
+
+-- hs.hotkey.bind(hyper, "1", applyCodingLayout)
+hs.hotkey.bind(hyper, "1", redBorderWindow)
+hs.hotkey.bind(hyper2, "1", isolateWindowMedium)
+hs.hotkey.bind(hyper2, "2", isolateWindowFull)
+
