@@ -1,0 +1,33 @@
+behavior {
+    theme "Kon"
+    actions {
+        core.trash.confirm false
+    }
+}
+
+environment {
+    terminal "iTerm"
+    textEditor "Sublime Text"
+}
+
+fonts {
+    actionBar [ "Default" 12 ]
+    breadcrumbs [ "Default" 12 ]
+    virtualTabs [ "Default Bold" 12 ]
+    files [ "Default" 13 ]
+    statusBar [ "Default Light" 11 ]
+    tableHeader [ "Default" 11 ]
+    tabs [ "Default" 12 ]
+    preferences [ "Monaco" 13 ]
+}
+
+keyBindings {
+    "Cmd+f" "core.favorites"
+    "Shift+F5" "core.copy.inactive"
+    "Shift+F6" "core.move.inactive"
+    "Cmd+r" "core.rename"
+    "Shift+Cmd+r" "core.finder.reveal"
+    "Shift+Cmd+n" "core.new.folder"
+    "Cmd+Alt+n" "core.new.file"
+    "Shift+Space" "core.select"
+}
